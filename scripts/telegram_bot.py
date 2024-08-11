@@ -27,7 +27,12 @@ from scripts.gpx_Osmand import generar_gpx_sordos
 
 # Helper Function
 def formatear_fecha(fecha):
-    locale.setlocale(locale.LC_TIME, 'es_ES.UTF-8')
+    try:
+        locale.setlocale(locale.LC_TIME, 'es_ES.UTF-8')
+    except locale.Error:
+        # Handle the case where the locale is not available
+        locale.setlocale(locale.LC_TIME, '')
+
     date_object = datetime.datetime.fromisoformat(fecha)
     fecha_formateada = date_object.strftime("%d de %B del %Y")
     return fecha_formateada
@@ -54,7 +59,7 @@ PUBLICADOR, VERIFICACION, TERRITORIO, METODO_ENVIO = range(4)
 load_dotenv()
 CHAT_ID_ADMIN = os.environ['TELEGRAM_ADMIN_CHAT_ID']
 TELEGRAM_BOT_TOKEN=os.environ['TELEGRAM_BOT_TOKEN']
-BASE_URL_API = 'http://localhost:8000/api/'
+BASE_URL_API = 'http://territorios-django:8000/api/'
 
 # FLUJO ASIGNAR - FASE 0
 # Maneja /asignar y envia Lista de Publicadores
