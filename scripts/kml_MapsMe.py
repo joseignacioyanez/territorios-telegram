@@ -173,7 +173,7 @@ def generar_kml_sordos():
 
 
     data = {'congregacion_id': 1}
-    sordos =  requests.post('http://localhost:8000/api/sordos/para_kml_y_gpx/', json = data).json()
+    sordos =  requests.post('http://territorios-django:8000/api/sordos/para_kml_y_gpx/', json = data).json()
 
     for sordo in sordos:
         placemark = ET.SubElement(document, "Placemark")
@@ -201,7 +201,7 @@ def generar_kml_sordos():
         #value.text = f"{sordo['territorio_numero']} - {sordo['territorio_nombre']}"
 
     data = {'congregacion_id': 1}
-    territorios =  requests.post('http://localhost:8000/api/territorios/congregacion/', json = data).json()
+    territorios =  requests.post('http://territorios-django:8000/api/territorios/congregacion/', json = data).json()
 
     for territorio in territorios:
 

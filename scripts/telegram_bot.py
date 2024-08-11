@@ -28,14 +28,13 @@ from scripts.gpx_Osmand import generar_gpx_sordos
 # Helper Function
 def formatear_fecha(fecha):
     try:
-        locale.setlocale(locale.LC_TIME, 'es_ES.UTF-8')
+        locale.setlocale(locale.LC_TIME, 'C.UTF-8')
     except locale.Error:
-        # Handle the case where the locale is not available
         locale.setlocale(locale.LC_TIME, '')
-
     date_object = datetime.datetime.fromisoformat(fecha)
     fecha_formateada = date_object.strftime("%d de %B del %Y")
     return fecha_formateada
+
 
 def notify_exception(e: Exception) -> None:
     # Notify the admin about the exception
@@ -245,7 +244,7 @@ async def metodo_envio(update: Update, context: ContextTypes.DEFAULT_TYPE) -> in
             'metodo_entrega': context.user_data['metodo_entrega'],
             'solo_pdf': False
         }
-    response_raw =  requests.post('http://localhost:8000/webTerritorios/asignar_territorio/', json = data)
+    response_raw =  requests.post('http://territorios-django:8000/webTerritorios/asignar_territorio/', json = data)
     response = response_raw.json()
 
     if response_raw.status_code == 200:
@@ -632,7 +631,7 @@ async def inline_button_asignaciones(update: Update, context: ContextTypes.DEFAU
                 'metodo_entrega': 'digital_publicador',
                 'solo_pdf': True
                 }
-                response_raw =  requests.post('http://localhost:8000/webTerritorios/asignar_territorio/', json = data)
+                response_raw =  requests.post('http://territorios-django:8000/webTerritorios/asignar_territorio/', json = data)
                 response = response_raw.json()
                 if response_raw.status_code == 200:                        
                     file = response.get('file_path')
@@ -653,7 +652,7 @@ async def inline_button_asignaciones(update: Update, context: ContextTypes.DEFAU
                 'metodo_entrega': 'digital_asignador',
                 'solo_pdf': True
                 }
-                response_raw =  requests.post('http://localhost:8000/webTerritorios/asignar_territorio/', json = data)
+                response_raw =  requests.post('http://territorios-django:8000/webTerritorios/asignar_territorio/', json = data)
                 response = response_raw.json()
                 if response_raw.status_code == 200:                        
                     file = response.get('file_path')
@@ -673,7 +672,7 @@ async def inline_button_asignaciones(update: Update, context: ContextTypes.DEFAU
                 'metodo_entrega': 'impreso_asignador',
                 'solo_pdf': True
                 }
-                response_raw =  requests.post('http://localhost:8000/webTerritorios/asignar_territorio/', json = data)
+                response_raw =  requests.post('http://territorios-django:8000/webTerritorios/asignar_territorio/', json = data)
                 response = response_raw.json()
                 if response_raw.status_code == 200:                        
                     file = response.get('file_path')

@@ -1,14 +1,5 @@
 # Dockerfile for Telegram Bot
-FROM python:3.10.14-slim-bullseye
-
-# Install locale package and generate locale
-RUN apt-get update && \
-    apt-get install -y locales && \
-    locale-gen es_ES.UTF-8
-
-# Set locale environment variables
-ENV LANG=es_ES.UTF-8
-ENV LC_ALL=es_ES.UTF-8
+FROM python:3.10.14-alpine3.20
 
 WORKDIR /bot
 
