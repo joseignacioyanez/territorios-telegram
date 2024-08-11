@@ -6,7 +6,7 @@ import os
 import time
 import traceback
 from dotenv import load_dotenv
-from telegram import ReplyKeyboardMarkup, ReplyKeyboardRemove, Update, InlineKeyboardButton, InlineKeyboardMarkup
+from telegram import ReplyKeyboardMarkup, ReplyKeyboardRemove, Update, InlineKeyboardButton, InlineKeyboardMarkup # type: ignore
 import requests
 from telegram.ext import ( # type: ignore
     Application,
