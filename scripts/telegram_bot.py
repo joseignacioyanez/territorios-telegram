@@ -18,6 +18,8 @@ from telegram.ext import ( # type: ignore
     CallbackQueryHandler,
 )
 import sys
+from security import safe_requests
+
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(os.path.dirname(SCRIPT_DIR))
 
@@ -40,7 +42,7 @@ def notify_exception(e: Exception) -> None:
     # Notify the admin about the exception
     error_message = f"☢️ An exception occurred in the bot:\n\n{str(e)}\n\n{traceback.format_exc()}"
     url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage?chat_id={CHAT_ID_ADMIN}&text={error_message}"
-    requests.get(url)
+    safe_requests.get(url)
 
 
 
@@ -545,7 +547,7 @@ async def inline_button_asignaciones(update: Update, context: ContextTypes.DEFAU
             # DETALLE DE ASIGNACION no entregada con botones para administrar
             if flag_proceso == "reporte_asignacion":
                 # Obtener detalles de asignacion
-                asignacion_detalles =  requests.get(BASE_URL_API + 'asignaciones/' + dato).json()
+                asignacion_detalles =  safe_requests.get(BASE_URL_API + 'asignaciones/' + dato).json()
 
                 # Devolver botones para Borrar y Entregar Asignacion
                 timestamp_now = str(int(time.time()))
@@ -569,7 +571,7 @@ async def inline_button_asignaciones(update: Update, context: ContextTypes.DEFAU
             # DETALLE DE ASIGNACION entregada
             elif flag_proceso == "detalle_asignacion":
                 # Obtener detalles de asignacion
-                asignacion_detalles =  requests.get(BASE_URL_API + 'asignaciones/' + dato).json()
+                asignacion_detalles =  safe_requests.get(BASE_URL_API + 'asignaciones/' + dato).json()
                 # Descripcion de la Asignacion
                 descripcion = f'''
     📋 *Asignacion* \n
@@ -593,7 +595,7 @@ async def inline_button_asignaciones(update: Update, context: ContextTypes.DEFAU
             
             # ENTREGAR ASIGNACION
             elif flag_proceso == "entregar_asignacion":
-                asignacion = requests.get(BASE_URL_API + f'asignaciones/{dato}').json()
+                asignacion = safe_requests.get(BASE_URL_API + f'asignaciones/{dato}').json()
                 asignacion['fecha_fin'] = datetime.datetime.now().isoformat()
                 response = requests.put(BASE_URL_API + f'asignaciones/{dato}/', json=asignacion)
                 if response.status_code == 200:
@@ -605,8 +607,8 @@ async def inline_button_asignaciones(update: Update, context: ContextTypes.DEFAU
             # REGENERAR PDF DE ASIGNACION
             elif flag_proceso == "regenerar_pdf":
                 # DATO = ID ASIGNACION
-                asignacion = requests.get(BASE_URL_API + f'asignaciones/{dato}').json()
-                publicador = requests.get(BASE_URL_API + f'publicadores/{asignacion["publicador"]}').json()
+                asignacion = safe_requests.get(BASE_URL_API + f'asignaciones/{dato}').json()
+                publicador = safe_requests.get(BASE_URL_API + f'publicadores/{asignacion["publicador"]}').json()
                 telegram_chatid = publicador['telegram_chatid']
                 dato2_publicador = telegram_chatid
                 
@@ -624,7 +626,7 @@ async def inline_button_asignaciones(update: Update, context: ContextTypes.DEFAU
 
             # 1. REGENERAR PDF DIGITAL AL ASIGNADO
             elif flag_proceso == "regenerar_pdf_digital_al_asignado":
-                asignacion = requests.get(BASE_URL_API + f'asignaciones/{dato}').json()
+                asignacion = safe_requests.get(BASE_URL_API + f'asignaciones/{dato}').json()
                 data = {
                 'publicador_id': asignacion['publicador'],
                 'territorio_id': asignacion['territorio'],
@@ -645,7 +647,7 @@ async def inline_button_asignaciones(update: Update, context: ContextTypes.DEFAU
 
             # 2. REGENERAR PDF DIGITAL AL SOLICITANTE
             elif flag_proceso == "regenerar_pdf_digital_al_solicitante":
-                asignacion = requests.get(BASE_URL_API + f'asignaciones/{dato}').json()
+                asignacion = safe_requests.get(BASE_URL_API + f'asignaciones/{dato}').json()
                 data = {
                 'publicador_id': asignacion['publicador'],
                 'territorio_id': asignacion['territorio'],
@@ -665,7 +667,7 @@ async def inline_button_asignaciones(update: Update, context: ContextTypes.DEFAU
 
             # 3. REGENERAR PDF IMPRESO AL SOLICITANTE
             elif flag_proceso == "regenerar_pdf_impreso_al_solicitante":
-                asignacion = requests.get(BASE_URL_API + f'asignaciones/{dato}').json()
+                asignacion = safe_requests.get(BASE_URL_API + f'asignaciones/{dato}').json()
                 data = {
                 'publicador_id': asignacion['publicador'],
                 'territorio_id': asignacion['territorio'],
@@ -716,7 +718,7 @@ async def start (update: Update, context: ContextTypes.DEFAULT_TYPE):
 
         # Llamar a Funcion de Entrega
         try:
-            asignacion = requests.get(BASE_URL_API + f'asignaciones/{id_asignacion}').json()
+            asignacion = safe_requests.get(BASE_URL_API + f'asignaciones/{id_asignacion}').json()
             asignacion['fecha_fin'] = datetime.datetime.now().isoformat()
             response = requests.put(BASE_URL_API + f'asignaciones/{id_asignacion}/', json=asignacion)
             if response.status_code == 200:
@@ -825,7 +827,7 @@ def main() -> None:
         print(f"An exception occurred in the bot:\n\n{str(e)}\n\n{traceback.format_exc()}")
         error_message = f"An exception occurred in the bot:\n\n{str(e)}\n\n{traceback.format_exc()}"
         url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage?chat_id={CHAT_ID_ADMIN}&text={error_message}"
-        requests.get(url)
+        safe_requests.get(url)
 
 if __name__ == "__main__":
     main()
