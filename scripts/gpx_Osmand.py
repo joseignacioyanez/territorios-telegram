@@ -34,7 +34,7 @@ def generar_gpx_sordos():
                     
     # Puntos
     data = {'congregacion_id': 1}
-    sordos =  requests.post('http://territorios-django:8000/api/sordos/para_kml_y_gpx/', json = data)
+    sordos =  requests.post('http://territorios-django:8000/api/sordos/para_kml_y_gpx/', json = data, timeout=60)
     sordos = sordos.json()
     for sordo in sordos:
         wpt = ET.SubElement(root, "wpt")
@@ -64,7 +64,7 @@ def generar_gpx_sordos():
         osmand_ammenity_type.text = "user_defined_other"
 
     data = {'congregacion_id': 1}
-    territorios =  requests.post('http://territorios-django:8000/api/territorios/congregacion/', json = data).json()
+    territorios =  requests.post('http://territorios-django:8000/api/territorios/congregacion/', json = data, timeout=60).json()
 
     for territorio in territorios:
 

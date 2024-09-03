@@ -11,7 +11,7 @@ def generar_csv_sordos():
         writer.writerow(field)
 
         data = {'congregacion_id': 1}
-        sordos =  requests.post('http://territorios-django:8000/api/sordos/para_kml_y_gpx/', json = data).json()
+        sordos =  requests.post('http://territorios-django:8000/api/sordos/para_kml_y_gpx/', json = data, timeout=60).json()
 
         for sordo in sordos:
             WKT = f"\"POINT ({sordo['gps_longitud']} {sordo['gps_latitud']})\""
@@ -29,7 +29,7 @@ def generar_csv_sordos():
             writer.writerow([WKT, nombre, direccion, detalles_direccion, estudio])
 
         data = {'congregacion_id': 1}
-        territorios =  requests.post('http://territorios-django:8000/api/territorios/congregacion/', json = data).json()
+        territorios =  requests.post('http://territorios-django:8000/api/territorios/congregacion/', json = data, timeout=60).json()
 
         for territorio in territorios:
 
