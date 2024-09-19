@@ -4,6 +4,7 @@ import xml.etree.ElementTree as ET
 from io import BytesIO
 
 import requests
+import defusedxml.ElementTree
 
 
 def obtener_fecha_titulo():
@@ -139,7 +140,7 @@ def generar_kml_sordos():
     </Styles>\
     '''
 
-    estilos = ET.parse(BytesIO(estilos))
+    estilos = defusedxml.ElementTree.parse(BytesIO(estilos))
     estilos_root = estilos.getroot()
 
     for estilo in estilos_root.iter('Style'):
