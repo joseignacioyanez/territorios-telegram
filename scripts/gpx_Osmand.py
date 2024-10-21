@@ -1,7 +1,7 @@
 from datetime import datetime
 import locale
 import xml.etree.ElementTree as ET
-from io import BytesIO
+from services import get_sordos_para_exportar_de_congregacion, get_territorios_de_congregacion
 
 import requests
 
@@ -11,7 +11,7 @@ def obtener_fecha_titulo():
     fecha_formateada = fecha.strftime("%d de %B del %Y")
     return fecha_formateada
 
-def generar_gpx_sordos():
+def generar_gpx_sordos(congregacion_id):
 
     NOMBRE_GPX = f"Sordos - {obtener_fecha_titulo()}"
 
@@ -33,9 +33,8 @@ def generar_gpx_sordos():
     time.text = str(datetime.now().date())
                     
     # Puntos
-    data = {'congregacion_id': 1}
-    sordos =  requests.post('http://territorios-django:8000/api/sordos/para_kml_y_gpx/', json = data)
-    sordos = sordos.json()
+    sordos = get_sordos_para_exportar_de_congregacion(congregacion_id)
+
     for sordo in sordos:
         wpt = ET.SubElement(root, "wpt")
         wpt.set("lat", str(sordo['gps_latitud']))
@@ -63,9 +62,8 @@ def generar_gpx_sordos():
         osmand_ammenity_type = ET.SubElement(extensions, "osmand:amenity_type")
         osmand_ammenity_type.text = "user_defined_other"
 
-    data = {'congregacion_id': 1}
-    territorios =  requests.post('http://territorios-django:8000/api/territorios/congregacion/', json = data).json()
-
+    territorios =  get_territorios_de_congregacion(congregacion_id)
+    
     for territorio in territorios:
 
         if territorio['numero'] == 0:

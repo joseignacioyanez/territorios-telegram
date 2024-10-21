@@ -1,26 +1,22 @@
 import csv
+from services import get_sordos_para_exportar_de_congregacion, get_territorios_de_congregacion
 
-import requests
-
-def generar_csv_sordos():
+def generar_csv_sordos(congregacion_id):
 
     with open('territorios.csv', 'w', newline='') as file:
         writer = csv.writer(file, lineterminator='\n', quoting=csv.QUOTE_NONE, quotechar=None, delimiter=',', escapechar='\\')
+        
         field = ['WKT', 'nombre', 'descripción', 'detalles_direccion', 'estudio']
-
         writer.writerow(field)
 
-        data = {'congregacion_id': 1}
-        sordos =  requests.post('http://territorios-django:8000/api/sordos/para_kml_y_gpx/', json = data).json()
+        sordos = get_sordos_para_exportar_de_congregacion(congregacion_id)
 
         for sordo in sordos:
             WKT = f"\"POINT ({sordo['gps_longitud']} {sordo['gps_latitud']})\""
-
             if sordo['territorio_nombre'] == "Estudios":
                 estudio = "Estudio"
             else:
                 estudio = "No Estudio"
-
 
             nombre = f"{sordo['codigo']} - {sordo['nombre']} - {sordo['anio_nacimiento']}".replace(',', ';')
             direccion = f"{sordo['direccion']}".replace(',', ';')
@@ -28,11 +24,9 @@ def generar_csv_sordos():
 
             writer.writerow([WKT, nombre, direccion, detalles_direccion, estudio])
 
-        data = {'congregacion_id': 1}
-        territorios =  requests.post('http://territorios-django:8000/api/territorios/congregacion/', json = data).json()
+        territorios =  get_territorios_de_congregacion(congregacion_id)
 
         for territorio in territorios:
-
             if territorio['numero'] == 0:
                 continue
 

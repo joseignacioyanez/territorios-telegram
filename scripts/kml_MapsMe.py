@@ -2,6 +2,7 @@ from datetime import datetime
 import locale
 import xml.etree.ElementTree as ET
 from io import BytesIO
+from services import get_sordos_para_exportar_de_congregacion, get_territorios_de_congregacion
 
 import requests
 
@@ -12,7 +13,7 @@ def obtener_fecha_titulo():
     fecha_formateada = fecha.strftime("%d de %B del %Y")
     return fecha_formateada
 
-def generar_kml_sordos():
+def generar_kml_sordos(congregacion_id):
 
     NOMBRE_KML = f"Sordos Sangolqui - {obtener_fecha_titulo()}"
     DESCRIPCION = "Territorios de Señas Sangolquí"
@@ -172,8 +173,7 @@ def generar_kml_sordos():
     mwm_access_Rules.text = "Local"
 
 
-    data = {'congregacion_id': 1}
-    sordos =  requests.post('http://territorios-django:8000/api/sordos/para_kml_y_gpx/', json = data).json()
+    sordos = get_sordos_para_exportar_de_congregacion(congregacion_id)
 
     for sordo in sordos:
         placemark = ET.SubElement(document, "Placemark")
@@ -200,9 +200,8 @@ def generar_kml_sordos():
         #value = ET.SubElement(data, "value")
         #value.text = f"{sordo['territorio_numero']} - {sordo['territorio_nombre']}"
 
-    data = {'congregacion_id': 1}
-    territorios =  requests.post('http://territorios-django:8000/api/territorios/congregacion/', json = data).json()
-
+    territorios =  get_territorios_de_congregacion(congregacion_id)
+    
     for territorio in territorios:
 
         if territorio['numero'] == 0:
