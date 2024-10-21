@@ -223,7 +223,7 @@ f'''
 # Guarda el Método de Entrega y finaliza la asignación
 async def metodo_envio(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
 
-    # Parse boton d eMetodo de envio y guardar en contexto
+    # Parse botón de Método de envio y guardar en contexto
     if update.message.text == 'Enviar al Telegram del herman@':
         context.user_data['metodo_entrega'] = 'digital_publicador'
     elif update.message.text == 'Registrar asignación y Enviarme el PDF digital por aquí':
@@ -231,14 +231,18 @@ async def metodo_envio(update: Update, context: ContextTypes.DEFAULT_TYPE) -> in
     elif update.message.text == 'Registrar asignación y Enviarme el PDF para Imprimir por aquí':
         context.user_data['metodo_entrega'] = 'impreso_asignador'
     else:
-        await update.message.reply_text("Error al obtener el Publicador. Por favor contacta a un administrador.")
+        await update.message.reply_text(
+            "Error al obtener el Publicador. Por favor contacta a un administrador."
+        )
         return ConversationHandler.END
 
     publicador = context.user_data['user_asignado_id']
     territorio = context.user_data['territorio_asignar_id']
     metodo_entrega = context.user_data['metodo_entrega']
     solo_generar = False
-    registro_exitoso, response = registrar_asignacion_y_generar_documento(publicador, territorio, metodo_entrega, solo_generar)
+    registro_exitoso, response = registrar_asignacion_y_generar_documento(
+        publicador, territorio, metodo_entrega, solo_generar
+    )
 
     if registro_exitoso:
         
@@ -253,57 +257,126 @@ async def metodo_envio(update: Update, context: ContextTypes.DEFAULT_TYPE) -> in
                 # Si el usuario tiene Telegram registrado
                 if response.get('chat_id'):
                     publicador_chat_id = response.get('chat_id')
-                    await context.bot.send_document(chat_id= publicador_chat_id, 
-                                                    document= document_file, 
-                                                    caption=f"¡Hola {user_asignado_nombre}! Se te ha asignado el territorio *{territorio_nombre}*. \n Por favor visita las direcciones, predica a cualquier persona que salga e intenta empezar estudios. Anota si no encuentras a nadie y regresa en diferentes horarios. Puedes avisarnos si cualquier detalle es incorrecto. \n ¡Muchas gracias por tu trabajo! 🎒🤟🏼", 
-                                                    parse_mode= 'markdown')
+                    await context.bot.send_document(
+                        chat_id=publicador_chat_id,
+                        document=document_file,
+                        caption=(
+                            f"¡Hola {user_asignado_nombre}! Se te ha asignado "
+                            f"el territorio *{territorio_nombre}*.\nPor favor "
+                            "visita las direcciones, predica a cualquier persona que "
+                            "salga e intenta empezar estudios. Anota si no encuentras "
+                            "a nadie y regresa en diferentes horarios. Puedes avisarnos "
+                            "si cualquier detalle es incorrecto.\n¡Muchas gracias por tu "
+                            "trabajo! 🎒🤟🏼"
+                        ),
+                        parse_mode='markdown'
+                    )
                 # Si el usuario no tiene Telegram registrado, enviar al Asignador para reenvio
                 else:
-                    await update.message.reply_document(document=document_file, 
-                                                        caption='*Por favor hazle llegar el territorio al publicador porque no se registra su Telegram en el Sistema. Y enviale el siguiente mensaje. Gracias*', 
-                                                        parse_mode='markdown')
-                    await update.message.reply_text(f"¡Hola {user_asignado_nombre}! Se te ha asignado el territorio *{territorio_nombre}*. \n Por favor visita las direcciones, predica a cualquier persona que salga e intenta empezar estudios. Anota si no encuentras a nadie y regresa en diferentes horarios. Puedes avisarnos si cualquier detalle es incorrecto. \n ¡Muchas gracias por tu trabajo! 🎒🤟🏼", 
-                                                    parse_mode= 'markdown')
+                    await update.message.reply_document(
+                        document=document_file,
+                        caption=(
+                            '*Por favor hazle llegar el territorio al publicador '
+                            'porque no se registra su Telegram en el Sistema. Y enviale '
+                            'el siguiente mensaje. Gracias*'
+                        ),
+                        parse_mode='markdown'
+                    )
+                    await update.message.reply_text(
+                        (
+                            f"¡Hola {user_asignado_nombre}! Se te ha asignado el "
+                            f"territorio *{territorio_nombre}*.\nPor favor visita las "
+                            "direcciones, predica a cualquier persona que salga e intenta "
+                            "empezar estudios. Anota si no encuentras a nadie y regresa "
+                            "en diferentes horarios. Puedes avisarnos si cualquier detalle "
+                            "es incorrecto.\n¡Muchas gracias por tu trabajo! 🎒🤟🏼"
+                        ),
+                        parse_mode='markdown'
+                    )
                 # Notificar al Administrador
-                await context.bot.send_message(chat_id=CHAT_ID_ADMIN, 
-                                                text=f"ℹ️ El territorio {territorio_nombre} ha sido asignado a {user_asignado_nombre} por {user_asignador_nombre} correctamente. Se ha enviado al Telegram del publicador")
+                await context.bot.send_message(
+                    chat_id=CHAT_ID_ADMIN,
+                    text=(
+                        f"ℹ️ El territorio {territorio_nombre} ha sido asignado a "
+                        f"{user_asignado_nombre} por {user_asignador_nombre} correctamente. "
+                        "Se ha enviado al Telegram del publicador"
+                    )
+                )
 
         elif metodo_entrega == 'digital_asignador':
             with open(file, 'rb') as document_file:
-                await update.message.reply_document(document=document_file,
-                                                    caption='*Por favor hazle llegar el territorio al publicador porque no se registra su Telegram en el Sistema. Y enviale el siguiente mensaje. Gracias*', 
-                                                    parse_mode='markdown')
-                await update.message.reply_text(f"¡Hola {user_asignado_nombre}! Se te ha asignado el territorio *{territorio_nombre}*. \n Por favor visita las direcciones, predica a cualquier persona que salga e intenta empezar estudios. Anota si no encuentras a nadie y regresa en diferentes horarios. Puedes avisarnos si cualquier detalle es incorrecto. \n ¡Muchas gracias por tu trabajo! 🎒🤟🏼", 
-                                                    parse_mode= 'markdown')
+                await update.message.reply_document(
+                    document=document_file,
+                    caption=(
+                        '*Por favor hazle llegar el territorio al publicador porque no '
+                        'se registra su Telegram en el Sistema. Y enviale el siguiente '
+                        'mensaje. Gracias*'
+                    ),
+                    parse_mode='markdown'
+                )
+                await update.message.reply_text(
+                    (
+                        f"¡Hola {user_asignado_nombre}! Se te ha asignado el "
+                        f"territorio *{territorio_nombre}*.\nPor favor visita las "
+                        "direcciones, predica a cualquier persona que salga e intenta "
+                        "empezar estudios. Anota si no encuentras a nadie y regresa en "
+                        "diferentes horarios. Puedes avisarnos si cualquier detalle "
+                        "es incorrecto.\n¡Muchas gracias por tu trabajo! 🎒🤟🏼"
+                    ),
+                    parse_mode='markdown'
+                )
                 # Notificar al Administrador
-                await context.bot.send_message(chat_id=CHAT_ID_ADMIN, 
-                                                text=f"ℹ️ El territorio {territorio_nombre} ha sido asignado a {user_asignado_nombre} por {user_asignador_nombre} correctamente. Se ha descargado el PDF digital para el asignador")
+                await context.bot.send_message(
+                    chat_id=CHAT_ID_ADMIN,
+                    text=(
+                        f"ℹ️ El territorio {territorio_nombre} ha sido asignado a "
+                        f"{user_asignado_nombre} por {user_asignador_nombre} correctamente. "
+                        "Se ha descargado el PDF digital para el asignador"
+                    )
+                )
 
         elif metodo_entrega == 'impreso_asignador':
             with open(file, 'rb') as document_file:
-                await update.message.reply_document(document=document_file, 
-                                                    caption='*Por favor hazle llegar el territorio al publicador*. Gracias', 
-                                                    parse_mode='markdown')
+                await update.message.reply_document(
+                    document=document_file,
+                    caption='*Por favor hazle llegar el territorio al publicador*. Gracias',
+                    parse_mode='markdown'
+                )
                 # Notificar al Administrador
-                await context.bot.send_message(chat_id=CHAT_ID_ADMIN, 
-                                                text=f"ℹ️ El territorio {territorio_nombre} ha sido asignado a {user_asignado_nombre} por {user_asignador_nombre} correctamente. Se ha descargado el PDF para imprimir para el asignador")
+                await context.bot.send_message(
+                    chat_id=CHAT_ID_ADMIN,
+                    text=(
+                        f"ℹ️ El territorio {territorio_nombre} ha sido asignado a "
+                        f"{user_asignado_nombre} por {user_asignador_nombre} correctamente. "
+                        "Se ha descargado el PDF para imprimir para el asignador"
+                    )
+                )
         
         else:
-            await update.message.reply_text("No se reconoce el método de entrega. Por favor contacta a un administrador.")
+            await update.message.reply_text(
+                "No se reconoce el método de entrega. Por favor contacta a un administrador."
+            )
             return ConversationHandler.END
     
     else:
         notify_exception(response.get('error'))
-        await update.message.reply_text(f"Error al asignar el territorio. Por favor contacta a un administrador. {response.get('error')}")
+        await update.message.reply_text(
+            f"Error al asignar el territorio. Por favor contacta a un administrador. {response.get('error')}"
+        )
         return ConversationHandler.END
 
     # Cleanup
     os.remove(file)
     
     await update.message.reply_text(
-        f"¡Excelente! \n {context.user_data['territorio_asignar_numero_nombre']} se asignó a {context.user_data['user_asignado_nombre']}. \n ¡Gracias por tu ayuda! \n", reply_markup=ReplyKeyboardRemove()
+        (
+            f"¡Excelente!\n{context.user_data['territorio_asignar_numero_nombre']} se "
+            f"asignó a {context.user_data['user_asignado_nombre']}.\n¡Gracias por tu ayuda!"
+        ),
+        reply_markup=ReplyKeyboardRemove()
     )
     return ConversationHandler.END
+
 
 # FLUJO ASIGNAR - FALLBACK CANCELAR
 # Cancela la conversación
