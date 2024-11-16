@@ -110,3 +110,11 @@ def get_publicador(publicador_id):
     except Exception as e:
         notify_exception(e)
         raise
+
+def get_asignaciones_de_congregacion(congregacion_id):
+    try:
+        data = {'congregacion_id': congregacion_id}
+        return requests.post(BASE_URL_API + 'asignaciones/reporte_congregacion/', json=data).json()
+    except Exception as e:
+        notify_exception(e)
+        raise
