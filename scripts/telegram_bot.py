@@ -1,6 +1,5 @@
 import os
 import traceback
-import requests
 from telegram import Update # type: ignore
 from telegram.ext import ( # type: ignore
     Application,
@@ -12,6 +11,8 @@ from telegram.ext import ( # type: ignore
     Update
 )
 import sys
+from security import safe_requests
+
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(os.path.dirname(SCRIPT_DIR))
 
@@ -75,7 +76,7 @@ def main() -> None:
         print(f"An exception occurred in the bot:\n\n{str(e)}\n\n{traceback.format_exc()}")
         error_message = f"An exception occurred in the bot:\n\n{str(e)}\n\n{traceback.format_exc()}"
         url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage?chat_id={CHAT_ID_ADMIN}&text={error_message}"
-        requests.get(url)
+        safe_requests.get(url)
 
 if __name__ == "__main__":
     main()
