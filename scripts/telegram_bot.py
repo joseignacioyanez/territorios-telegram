@@ -8,8 +8,7 @@ from telegram.ext import ( # type: ignore
     ConversationHandler,
     MessageHandler,
     filters,
-    CallbackQueryHandler,
-    Update
+    CallbackQueryHandler
 )
 import sys
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))

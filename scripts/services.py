@@ -6,7 +6,7 @@ from utils import notify_exception
 def get_user_by_telegram_chatid(telegram_chatid):
     try:
         data = {'telegram_chatid': telegram_chatid}
-        return requests.post(BASE_URL_API + 'publicadores/buscar_telegram_chatid/', json=data)
+        return requests.post(BASE_URL_API + 'publicadores/buscar_telegram_chatid/', json=data).json()
     except Exception as e:
         notify_exception(e)
         raise
