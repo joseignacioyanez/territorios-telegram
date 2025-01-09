@@ -19,7 +19,7 @@ from config import (
     VERIFICACION, 
     TERRITORIO, 
     METODO_ENVIO, 
-    CHAT_ID_ADMIN, 
+    TELEGRAM_TECH_ADMIN_CHAT_ID, 
     TELEGRAM_BOT_TOKEN
 )
 
@@ -73,7 +73,7 @@ def main() -> None:
         # Notify the admin about the exception
         print(f"An exception occurred in the bot:\n\n{str(e)}\n\n{traceback.format_exc()}")
         error_message = f"An exception occurred in the bot:\n\n{str(e)}\n\n{traceback.format_exc()}"
-        url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage?chat_id={CHAT_ID_ADMIN}&text={error_message}"
+        url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage?chat_id={TELEGRAM_TECH_ADMIN_CHAT_ID}&text={error_message}"
         requests.get(url)
 
 if __name__ == "__main__":

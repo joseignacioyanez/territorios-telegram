@@ -118,3 +118,18 @@ def get_asignaciones_de_congregacion(congregacion_id):
     except Exception as e:
         notify_exception(e)
         raise
+
+def get_superadmin_from_publicador(publicador_id):
+    try:
+        data = {'publicador_id': publicador_id}
+        return requests.post(BASE_URL_API + f'publicadores/superadmin_congregacion/', json=data).json()
+    except Exception as e:
+        notify_exception(e)
+        raise
+
+def get_todos_superadmin():
+    try:
+        return requests.get(BASE_URL_API + 'publicadores/superadmin/').json()
+    except Exception as e:
+        notify_exception(e)
+        raise
