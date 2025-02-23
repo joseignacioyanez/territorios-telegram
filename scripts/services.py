@@ -2,6 +2,7 @@ import datetime
 import requests
 from config import BASE_URL_API, BASE_URL_WEB
 from utils import notify_exception
+from security import safe_requests
 
 def get_user_by_telegram_chatid(telegram_chatid):
     try:
@@ -83,7 +84,7 @@ def get_sordos_para_exportar_de_congregacion(congregacion_id):
 
 def get_asignacion(asignacion_id):
     try:
-        return  requests.get(BASE_URL_API + 'asignaciones/' + asignacion_id).json()
+        return  safe_requests.get(BASE_URL_API + 'asignaciones/' + asignacion_id).json()
     except Exception as e:
         notify_exception(e)
         raise
@@ -106,7 +107,7 @@ def entregar_asignacion(asignacion_id):
 
 def get_publicador(publicador_id):
     try:
-        return requests.get(BASE_URL_API + f'publicadores/{publicador_id}').json()
+        return safe_requests.get(BASE_URL_API + f'publicadores/{publicador_id}').json()
     except Exception as e:
         notify_exception(e)
         raise
@@ -129,7 +130,7 @@ def get_superadmin_from_publicador(publicador_id):
 
 def get_todos_superadmin():
     try:
-        return requests.get(BASE_URL_API + 'publicadores/superadmin/').json()
+        return safe_requests.get(BASE_URL_API + 'publicadores/superadmin/').json()
     except Exception as e:
         notify_exception(e)
         raise
