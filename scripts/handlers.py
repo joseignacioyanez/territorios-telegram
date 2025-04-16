@@ -1,4 +1,6 @@
 # Standard Library Imports
+import base64
+from io import BytesIO
 import os
 import time
 import datetime
@@ -6,6 +8,7 @@ import requests
 
 # Telegram Imports
 from telegram import (  # type: ignore
+    InputFile,
     ReplyKeyboardMarkup, 
     ReplyKeyboardRemove, 
     Update, 
@@ -255,72 +258,45 @@ async def metodo_envio(update: Update, context: ContextTypes.DEFAULT_TYPE) -> in
 
 
     if registro_exitoso:
-        
         user_asignador_nombre = context.user_data['user_asignador']['nombre']
         user_asignado_nombre = context.user_data['user_asignado_nombre']
         territorio_nombre = response.get('territorio')
 
-        file = response.get('file_path')
+        # Decodificar los datos del PDF desde base64
+        pdf_base64 = response.get('pdf_data')
+        pdf_bytes = base64.b64decode(pdf_base64)
+        filename = response.get('filename')
+        
+        # Crear un archivo virtual con los bytes
+        pdf_file = BytesIO(pdf_bytes)
+        pdf_file.name = filename
 
         if metodo_entrega == 'digital_publicador':
-            with open(file, 'rb') as document_file:
-                # Si el usuario tiene Telegram registrado
-                if response.get('chat_id'):
-                    publicador_chat_id = response.get('chat_id')
-                    await context.bot.send_document(
-                        chat_id=publicador_chat_id,
-                        document=document_file,
-                        caption=(
-                            f"¡Hola {user_asignado_nombre}! Se te ha asignado "
-                            f"el territorio *{territorio_nombre}*.\nPor favor "
-                            "visita las direcciones, predica a cualquier persona que "
-                            "salga e intenta empezar estudios. Anota si no encuentras "
-                            "a nadie y regresa en diferentes horarios. Puedes avisarnos "
-                            "si cualquier detalle es incorrecto.\n¡Muchas gracias por tu "
-                            "trabajo! 🎒🤟🏼"
-                        ),
-                        parse_mode='markdown'
-                    )
-                # Si el usuario no tiene Telegram registrado, enviar al Asignador para reenvio
-                else:
-                    await update.message.reply_document(
-                        document=document_file,
-                        caption=(
-                            '*Por favor hazle llegar el territorio al publicador '
-                            'porque no se registra su Telegram en el Sistema. Y enviale '
-                            'el siguiente mensaje. Gracias*'
-                        ),
-                        parse_mode='markdown'
-                    )
-                    await update.message.reply_text(
-                        (
-                            f"¡Hola {user_asignado_nombre}! Se te ha asignado el "
-                            f"territorio *{territorio_nombre}*.\nPor favor visita las "
-                            "direcciones, predica a cualquier persona que salga e intenta "
-                            "empezar estudios. Anota si no encuentras a nadie y regresa "
-                            "en diferentes horarios. Puedes avisarnos si cualquier detalle "
-                            "es incorrecto.\n¡Muchas gracias por tu trabajo! 🎒🤟🏼"
-                        ),
-                        parse_mode='markdown'
-                    )
-                # Notificar al Administrador
-                await context.bot.send_message(
-                    chat_id=context.user_data['superadmin']['telegram_chatid'],
-                    text=(
-                        f"ℹ️ El territorio {territorio_nombre} ha sido asignado a "
-                        f"{user_asignado_nombre} por {user_asignador_nombre} correctamente. "
-                        "Se ha enviado al Telegram del publicador"
-                    )
-                )
-
-        elif metodo_entrega == 'digital_asignador':
-            with open(file, 'rb') as document_file:
-                await update.message.reply_document(
-                    document=document_file,
+            # Si el usuario tiene Telegram registrado
+            if response.get('chat_id'):
+                publicador_chat_id = response.get('chat_id')
+                await context.bot.send_document(
+                    chat_id=publicador_chat_id,
+                    document=InputFile(pdf_file),
                     caption=(
-                        '*Por favor hazle llegar el territorio al publicador porque no '
-                        'se registra su Telegram en el Sistema. Y enviale el siguiente '
-                        'mensaje. Gracias*'
+                        f"¡Hola {user_asignado_nombre}! Se te ha asignado "
+                        f"el territorio *{territorio_nombre}*.\nPor favor "
+                        "visita las direcciones, predica a cualquier persona que "
+                        "salga e intenta empezar estudios. Anota si no encuentras "
+                        "a nadie y regresa en diferentes horarios. Puedes avisarnos "
+                        "si cualquier detalle es incorrecto.\n¡Muchas gracias por tu "
+                        "trabajo! 🎒🤟🏼"
+                    ),
+                    parse_mode='markdown'
+                )
+            # Si el usuario no tiene Telegram registrado, enviar al Asignador para reenvio
+            else:
+                await update.message.reply_document(
+                    document=InputFile(pdf_file),
+                    caption=(
+                        '*Por favor hazle llegar el territorio al publicador '
+                        'porque no se registra su Telegram en el Sistema. Y enviale '
+                        'el siguiente mensaje. Gracias*'
                     ),
                     parse_mode='markdown'
                 )
@@ -329,38 +305,68 @@ async def metodo_envio(update: Update, context: ContextTypes.DEFAULT_TYPE) -> in
                         f"¡Hola {user_asignado_nombre}! Se te ha asignado el "
                         f"territorio *{territorio_nombre}*.\nPor favor visita las "
                         "direcciones, predica a cualquier persona que salga e intenta "
-                        "empezar estudios. Anota si no encuentras a nadie y regresa en "
-                        "diferentes horarios. Puedes avisarnos si cualquier detalle "
+                        "empezar estudios. Anota si no encuentras a nadie y regresa "
+                        "en diferentes horarios. Puedes avisarnos si cualquier detalle "
                         "es incorrecto.\n¡Muchas gracias por tu trabajo! 🎒🤟🏼"
                     ),
                     parse_mode='markdown'
                 )
-                # Notificar al Administrador
-                await context.bot.send_message(
-                    chat_id=context.user_data['superadmin']['telegram_chatid'],
-                    text=(
-                        f"ℹ️ El territorio {territorio_nombre} ha sido asignado a "
-                        f"{user_asignado_nombre} por {user_asignador_nombre} correctamente. "
-                        "Se ha descargado el PDF digital para el asignador"
-                    )
+            # Notificar al Administrador
+            await context.bot.send_message(
+                chat_id=context.user_data['superadmin']['telegram_chatid'],
+                text=(
+                    f"ℹ️ El territorio {territorio_nombre} ha sido asignado a "
+                    f"{user_asignado_nombre} por {user_asignador_nombre} correctamente. "
+                    "Se ha enviado al Telegram del publicador"
                 )
+            )
+
+        elif metodo_entrega == 'digital_asignador':
+            await update.message.reply_document(
+                document=InputFile(pdf_file),
+                caption=(
+                    '*Por favor hazle llegar el territorio al publicador porque no '
+                    'se registra su Telegram en el Sistema. Y enviale el siguiente '
+                    'mensaje. Gracias*'
+                ),
+                parse_mode='markdown'
+            )
+            await update.message.reply_text(
+                (
+                    f"¡Hola {user_asignado_nombre}! Se te ha asignado el "
+                    f"territorio *{territorio_nombre}*.\nPor favor visita las "
+                    "direcciones, predica a cualquier persona que salga e intenta "
+                    "empezar estudios. Anota si no encuentras a nadie y regresa en "
+                    "diferentes horarios. Puedes avisarnos si cualquier detalle "
+                    "es incorrecto.\n¡Muchas gracias por tu trabajo! 🎒🤟🏼"
+                ),
+                parse_mode='markdown'
+            )
+            # Notificar al Administrador
+            await context.bot.send_message(
+                chat_id=context.user_data['superadmin']['telegram_chatid'],
+                text=(
+                    f"ℹ️ El territorio {territorio_nombre} ha sido asignado a "
+                    f"{user_asignado_nombre} por {user_asignador_nombre} correctamente. "
+                    "Se ha descargado el PDF digital para el asignador"
+                )
+            )
 
         elif metodo_entrega == 'impreso_asignador':
-            with open(file, 'rb') as document_file:
-                await update.message.reply_document(
-                    document=document_file,
-                    caption='*Por favor hazle llegar el territorio al publicador*. Gracias',
-                    parse_mode='markdown'
+            await update.message.reply_document(
+                document=InputFile(pdf_file),
+                caption='*Por favor hazle llegar el territorio al publicador*. Gracias',
+                parse_mode='markdown'
+            )
+            # Notificar al Administrador
+            await context.bot.send_message(
+                chat_id=context.user_data['superadmin']['telegram_chatid'],
+                text=(
+                    f"ℹ️ El territorio {territorio_nombre} ha sido asignado a "
+                    f"{user_asignado_nombre} por {user_asignador_nombre} correctamente. "
+                    "Se ha descargado el PDF para imprimir para el asignador"
                 )
-                # Notificar al Administrador
-                await context.bot.send_message(
-                    chat_id=context.user_data['superadmin']['telegram_chatid'],
-                    text=(
-                        f"ℹ️ El territorio {territorio_nombre} ha sido asignado a "
-                        f"{user_asignado_nombre} por {user_asignador_nombre} correctamente. "
-                        "Se ha descargado el PDF para imprimir para el asignador"
-                    )
-                )
+            )
         
         else:
             await update.message.reply_text(
@@ -375,9 +381,6 @@ async def metodo_envio(update: Update, context: ContextTypes.DEFAULT_TYPE) -> in
         )
         return ConversationHandler.END
 
-    # Cleanup
-    os.remove(file)
-    
     await update.message.reply_text(
         (
             f"¡Excelente!\n{context.user_data['territorio_asignar_numero_nombre']} se "
@@ -750,28 +753,34 @@ async def inline_button_asignaciones(update: Update, context: ContextTypes.DEFAU
                     )
                 
                 if registro_exitoso:
-                    file = response.get('file_path')
-                    with open(file, 'rb') as document_file:
-                        publicador_nombre = asignacion['publicador_nombre']
-                        territorio_info = f"{asignacion['territorio_numero']} - {asignacion['territorio_nombre']}"
 
-                        mensaje = (
-                            f"¡Hola {publicador_nombre}! "
-                            f"Se te ha asignado el territorio *{territorio_info}*.\n"
-                            "Por favor visita las direcciones, predica a cualquier persona que salga e intenta empezar estudios. "
-                            "Anota si no encuentras a nadie y regresa en diferentes horarios. "
-                            "Puedes avisarnos si cualquier detalle es incorrecto.\n"
-                            "¡Muchas gracias por tu trabajo! 🎒🤟🏼"
-                        )
+                    # Decodificar los datos del PDF desde base64
+                    pdf_base64 = response.get('pdf_data')
+                    pdf_bytes = base64.b64decode(pdf_base64)
+                    filename = response.get('filename')
+                    # Crear un archivo virtual con los bytes
+                    pdf_file = BytesIO(pdf_bytes)
+                    pdf_file.name = filename          
 
-                        await context.bot.send_document(
-                            chat_id=dato2, 
-                            document=document_file, 
-                            caption=mensaje, 
-                            parse_mode='markdown'
-                        )
-                # Cleanup
-                os.remove(file)
+                    publicador_nombre = asignacion['publicador_nombre']
+                    territorio_info = f"{asignacion['territorio_numero']} - {asignacion['territorio_nombre']}"
+
+                    mensaje = (
+                        f"¡Hola {publicador_nombre}! "
+                        f"Se te ha asignado el territorio *{territorio_info}*.\n"
+                        "Por favor visita las direcciones, predica a cualquier persona que salga e intenta empezar estudios. "
+                        "Anota si no encuentras a nadie y regresa en diferentes horarios. "
+                        "Puedes avisarnos si cualquier detalle es incorrecto.\n"
+                        "¡Muchas gracias por tu trabajo! 🎒🤟🏼"
+                    )
+
+                    await context.bot.send_document(
+                        chat_id=dato2, 
+                        document=InputFile(pdf_file), 
+                        caption=mensaje, 
+                        parse_mode='markdown'
+                    )
+                
                 await query.message.reply_text("PDF enviado al Telegram del Publicador.")
 
             # 5.2. REGENERAR PDF DIGITAL AL SOLICITANTE
@@ -784,17 +793,22 @@ async def inline_button_asignaciones(update: Update, context: ContextTypes.DEFAU
                         True
                     )
                 
-                if registro_exitoso:                   
-                    file = response.get('file_path')
-                    with open(file, 'rb') as document_file:
-                        await context.bot.send_document(
-                                        chat_id=dato2, 
-                                        document=document_file, 
-                                        caption="He aquí el documento!!!", 
-                                        parse_mode='markdown'
-                                    )                
-                # Cleanup
-                os.remove(file)
+                if registro_exitoso:         
+                    
+                    # Decodificar los datos del PDF desde base64
+                    pdf_base64 = response.get('pdf_data')
+                    pdf_bytes = base64.b64decode(pdf_base64)
+                    filename = response.get('filename')
+                    # Crear un archivo virtual con los bytes
+                    pdf_file = BytesIO(pdf_bytes)
+                    pdf_file.name = filename          
+                    
+                    await context.bot.send_document(
+                                    chat_id=dato2, 
+                                    document=InputFile(pdf_file), 
+                                    caption="He aquí el documento!!!", 
+                                    parse_mode='markdown'
+                                )                
 
 
             # 5.3. REGENERAR PDF IMPRESO AL SOLICITANTE
@@ -808,17 +822,21 @@ async def inline_button_asignaciones(update: Update, context: ContextTypes.DEFAU
                     )
                 
                 if registro_exitoso:   
-                    file = response.get('file_path')
-                    with open(file, 'rb') as document_file:
-                        await context.bot.send_document(
-                                        chat_id=dato2, 
-                                        document=document_file, 
-                                        caption=f"He aquí el documento!!!", 
-                                        parse_mode='markdown'
-                                        )
-                
-                # Cleanup
-                os.remove(file)
+
+                    # Decodificar los datos del PDF desde base64
+                    pdf_base64 = response.get('pdf_data')
+                    pdf_bytes = base64.b64decode(pdf_base64)
+                    filename = response.get('filename')
+                    # Crear un archivo virtual con los bytes
+                    pdf_file = BytesIO(pdf_bytes)
+                    pdf_file.name = filename          
+
+                    await context.bot.send_document(
+                                    chat_id=dato2, 
+                                    document=InputFile(pdf_file), 
+                                    caption=f"He aquí el documento!!!", 
+                                    parse_mode='markdown'
+                                    )
 
             # 5.4 RESPONDER A USUARIO EN LA FUNCION ECHO
             elif flag_proceso == 'responder_usuario':

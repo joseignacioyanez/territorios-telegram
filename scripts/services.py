@@ -98,7 +98,8 @@ def delete_asignacion(asignacion_id):
 def entregar_asignacion(asignacion_id):
     try:
         asignacion =  get_asignacion(asignacion_id)
-        asignacion['fecha_fin'] = datetime.datetime.now().isoformat()
+        # Fecha formato ISO pero sin el tiempo, split
+        asignacion['fecha_fin'] = datetime.datetime.now().isoformat().split('T')[0]
         return requests.put(BASE_URL_API + f'asignaciones/{asignacion_id}/', json=asignacion)
     except Exception as e:
         notify_exception(e)

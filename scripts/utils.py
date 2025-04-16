@@ -5,13 +5,25 @@ import traceback
 from config import TELEGRAM_BOT_TOKEN, TELEGRAM_TECH_ADMIN_CHAT_ID
 
 def formatear_fecha(fecha):
-    try:
-        locale.setlocale(locale.LC_TIME, 'C.UTF-8')
-    except locale.Error:
-        locale.setlocale(locale.LC_TIME, '')
+    meses_es = {
+        1: "enero",
+        2: "febrero",
+        3: "marzo",
+        4: "abril",
+        5: "mayo",
+        6: "junio",
+        7: "julio",
+        8: "agosto",
+        9: "septiembre",
+        10: "octubre",
+        11: "noviembre",
+        12: "diciembre"
+    }
     date_object = datetime.datetime.fromisoformat(fecha)
-    fecha_formateada = date_object.strftime("%d de %B del %Y")
-    return fecha_formateada
+    dia = date_object.day
+    mes = meses_es[date_object.month]
+    año = date_object.year
+    return f"{dia} de {mes} del {año}"
 
 
 def notify_exception(e: Exception) -> None:
