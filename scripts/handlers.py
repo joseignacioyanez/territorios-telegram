@@ -53,6 +53,8 @@ from kml_MapsMe import generar_kml_sordos
 from gpx_Osmand import generar_gpx_sordos
 from csv_GoogleMyMaps import generar_csv_sordos
 
+from s13 import generar_s_13_pdf_bytes
+
 
 # FLUJO ASIGNAR - FASE 0
 # Maneja /asignar y envia Lista de Publicadores
@@ -611,6 +613,53 @@ async def exportar_sordos(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text("No se reconoce este usuario. Por favor contacta a un administrador.")
         return ConversationHandler.END
 
+async def generar_formulario_s13(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Maneja el comando /generarS13 para generar y enviar el formulario S-13."""
+    
+    try:
+        # Obtener datos del usuario
+        user = get_user_by_telegram_chatid(update.message.chat_id)[0]
+        # Verificar permisos
+        user_groups = user['user']['groups']
+        groups_pueden_administrar = ['administradores']
+        if not any(group.get('name') in groups_pueden_administrar for group in user_groups):
+            await update.message.reply_text("No tienes permisos para generar este formulario.")
+            return
+        
+        # Informar al usuario que se está generando el PDF
+        progreso_msg = await update.message.reply_text("Generando el formulario S-13. Esto puede tardar unos momentos...")
+        
+        # Obtener la ID de la congregación asociada con este usuario
+        congregacion_id = user['user'].get('congregacion_id')
+        
+        if not congregacion_id:
+            await update.message.reply_text("No se encontró una congregación asociada a tu cuenta.")
+            return
+        
+        # Ruta al template
+        template_path = "scripts/S-13_S.pdf"  # Ajusta esta ruta según tu estructura
+        
+        # Generar el PDF en memoria
+        pdf_bytes = generar_s_13_pdf_bytes(congregacion_id, template_path)
+        
+        # Crear un archivo virtual con los bytes
+        pdf_file = BytesIO(pdf_bytes)
+        pdf_file.name = f"S-13 - {user['user']['congregacion_nombre']}.pdf"
+        
+        # Eliminar mensaje de progreso
+        await progreso_msg.delete()
+        
+        # Enviar el PDF como documento
+        await context.bot.send_document(
+            chat_id=update.effective_chat.id,
+            document=InputFile(pdf_file),
+            caption="Aquí está el formulario S-13 generado para la congregación.",
+            parse_mode='markdown'
+        )
+        
+    except Exception as e:
+        notify_exception(e)
+        await update.message.reply_text(f"Error al generar el formulario S-13: {str(e)}")
 
 async def menu_administrador(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
@@ -629,6 +678,7 @@ async def menu_administrador(update: Update, context: ContextTypes.DEFAULT_TYPE)
                 ['/reporteEntregas \n 📋 Reporte de Entregas Recientes'],
                 ['/reporteTerritorios \n 🗺️ Reporte de Territorios'],
                 ['/exportarSordos \n 📍 Exportar a Apps de Mapas'],
+                ['/generarS13 \n 📑 Generar Formulario S-13'],
             ]
             reply_markup = ReplyKeyboardMarkup(keyboard, 
                                                 one_time_keyboard=True, 

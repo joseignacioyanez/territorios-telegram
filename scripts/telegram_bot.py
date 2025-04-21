@@ -25,7 +25,8 @@ from config import (
 
 from handlers import (
     asignar, 
-    cancelar, 
+    cancelar,
+    generar_formulario_s13, 
     reporte_asignaciones, 
     reporte_entregas,
     reporte_territorios, 
@@ -61,6 +62,7 @@ def main() -> None:
     application.add_handler(CommandHandler("reporteEntregas",reporte_entregas))
     application.add_handler(CommandHandler("reporteTerritorios",reporte_territorios))
     application.add_handler(CommandHandler("exportarSordos", exportar_sordos))
+    application.add_handler(CommandHandler("generarS13", generar_formulario_s13))
     application.add_handler(CommandHandler("admin", menu_administrador))
     application.add_handler(CallbackQueryHandler(inline_button_asignaciones))
 
