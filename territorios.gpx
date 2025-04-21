@@ -1,0 +1,1836 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gpx version="1.1" creator="OsmAnd Maps 4.7.3 (4.7.3.10)" xmlns="http://www.topografix.com/GPX/1/1" xmlns:osmand="https://osmand.net" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+	<metadata>
+		<name>Sordos - 21 de abril del 2025</name>
+		<time>2025-04-21</time>
+	</metadata>
+	<wpt lat="-0.325593" lon="-78.478238">
+		<ele />
+		<name>SS-050 - Emma Paucar Sandoval - 1968</name>
+		<desc>Barrio San Francisco, Calle Panzaleo -- Casa dos pisos con una palmera</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ff86b953</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.390824" lon="-78.422427">
+		<ele />
+		<name>SS-056 - Hector Dario Guanolema - 2003</name>
+		<desc>Pasando San Fernando ver Mapa -- Casa esquinera, modelo Miduvi,sin cerramiento</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ff86b953</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.268223" lon="-78.465066">
+		<ele />
+		<name>SS-064 - Maricela Caiza - 1998</name>
+		<desc>Pasaje N12I y Cornelia Polit -- Pasaje de entrada de tierra, en la parte de atrás esta el parque  Metropolitano La Armenia</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ff86b953</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.255606" lon="-78.493516">
+		<ele />
+		<name>SS-079 - Jhonatan Caza - 2000</name>
+		<desc>Balcon del valle,Av Miguel Zambrano  las palmeras E18-35 -- Puerta negra, timbre puerta de garaje</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ff86b953</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.269073" lon="-78.500160">
+		<ele />
+		<name>SS-082 - Sonia Ramos - None</name>
+		<desc>Calle Lizardo Garcia N10A Gabriel Calderón casa cemento y puertas verdes -- Tiene una hija Dana Esposo Byron oyente trabajo en letrero Gigantografias, facebook Sonia María Campverde</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ff86b953</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.367248" lon="-78.345222">
+		<ele />
+		<name>SS-087 - Saul Bautista - 2004</name>
+		<desc>Sector San Agustin -- </desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ff86b953</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.249375" lon="-78.494982">
+		<ele />
+		<name>SS-092 - Mónica Escobar - 1961</name>
+		<desc>Barrio Obrero Independiente en laVia a Valle de los Chillos y Jose de Ines  Juan Bautista Aguirre E15 Y San Francisco de Quito -- Casa esquinera celeste bajo letrero de Lavanderia Solmatic</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ff86b953</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.331103" lon="-78.442765">
+		<ele />
+		<name>SS-105 - Janeth Salazar Analuisa - 1979</name>
+		<desc>Casa (Luis Cordero y Macará esquina frente a parque. ) Trabajo (Puesto de Jugos en la parte baja del parque Santa Clara al frente donde hay un puente metalico que cruza el rio) -- Casa (Puerta Negra que dice UNE, casa azul dentro techo zinc bloques)  Telefono de persona que le cuida, Rita 0983330211</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ff86b953</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.285963" lon="-78.486600">
+		<ele />
+		<name>SS-119 - Transito Gualotuña - 1955</name>
+		<desc>Av Pichincha y Pasaje Allende casa # N3-181 -- Sengunda casa amarilla, frente a conjunto ¨BRISAS DEL VALLE 2¨</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ff86b953</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.348456" lon="-78.428749">
+		<ele />
+		<name>SS-224 - Robert Llano - 1999</name>
+		<desc>Antonio Checa y Juan Castelos. Esquina. Local de Comida por las tardes. -- </desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ff86b953</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.339732" lon="-78.448480">
+		<ele />
+		<name>SS-225 - Andrés Catota - 1997</name>
+		<desc>Enrique Tello y Pasaje 3. Porton de Madera. 3 Pisos -- Vive en el piso de abajo.</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ff86b953</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.293389" lon="-78.471677">
+		<ele />
+		<name>SS-040 - Paul Morales - 1995</name>
+		<desc>Calle Simon Bolivar # E7-99, callejon Junto a puerta verde -- Ingresar por el callejon hasta pasillo entre muchas casas y depts. Vive en 3er piso subiendo gradas de caracol</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.358153" lon="-78.453363">
+		<ele />
+		<name>SS-044 - Javier Orlando Salazar Analuisa - 0</name>
+		<desc>El Milagro, calle Esmeraldita 2da entrada lado izquierdo al fondo -- Penultima casa 2 pisos ,  Visitar en las tardes, no ir solas</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.358276" lon="-78.453379">
+		<ele />
+		<name>SS-045 - Marco Patricio Salazar Analuisa - 1984</name>
+		<desc>El Milagro, Calle Esmeraldita 2da entrada lado izquierdo al fondo penultima casa de 2 pisos -- Visitar en las tardes, no ir solas</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.366380" lon="-78.375600">
+		<ele />
+		<name>SS-085 - Juanita - 0</name>
+		<desc>El Condor. Casa de 2 pisos . Frente Cruz -- </desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.339343" lon="-78.483110">
+		<ele />
+		<name>SS-112 - Maira Toaza - 1990</name>
+		<desc>Antigua via a Amaguaña -- Calle de la cooperativa de ahorro Cotogchoa casa de 3  pisos color taxo,porton negro, vive en el 2 piso</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.279904" lon="-78.492145">
+		<ele />
+		<name>SS-120 - Yolanda Paucar - 2002</name>
+		<desc>Santa Monica Alta, Av Pichincha y Clariza Perez  frente al letrero coop. 14 de Marzo -- Pasaje con gradas primera casa lado izquierdo, arco de flores.</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.378623" lon="-78.504615">
+		<ele />
+		<name>SS-025 - Cesar Augusto Berrones - 1994</name>
+		<desc>Barrio Peluche,  Calle Abdon Calderon Casa #S3-12 -- Calle Coop.Transporte San PedroAmaguaña- parque  al lado de lavadora de carros Pit Stop , callejon puerta celeste</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.382515" lon="-78.503652">
+		<ele />
+		<name>SS-027 - Henry Saul Medina  Chiguano - 2001</name>
+		<desc>Via Amaguaña Sector Peluche, Calle Espejo -- Cerca Calle Calderón, letrero Reduzca Velocidad</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.395829" lon="-78.517428">
+		<ele />
+		<name>SS-028 - Jose Carlos Araujo Casamen - 1955</name>
+		<desc>Amaguaña mas arriba de La Moreria -- Entrada letrero a Pasochoa frente Escuela Benjamin Carrion- cerca La M</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.375555" lon="-78.508287">
+		<ele />
+		<name>SS-030 - Manuel Pachacama - 1967</name>
+		<desc>Calle Antonio Jose de Sucre S2-12 y Simon Bolivar -- Casa verde 1 piso al lado de casa de 2 pisos fachada de ladrillo</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.377854" lon="-78.523117">
+		<ele />
+		<name>SS-031 - Luis Hernan Teran Meneses - 1955</name>
+		<desc>Uyumbicho -- </desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.368238" lon="-78.499640">
+		<ele />
+		<name>SS-068 - Hermina Suntaxi - 1967</name>
+		<desc>Barrio La florida calle Iglesias lote #18B casa 1er piso casa #E2-95  Calle -5 junio -- Parada de bus letrero Escuela Margarita Ponce y tienda casa color blanco y rosado</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.360318" lon="-78.498379">
+		<ele />
+		<name>SS-069 - Marco Rene Pachacama - 1982</name>
+		<desc>Antigua Via Amaguaña Barrio San Fernando cerca a Yanahuayco -- Parada del bus en Plantacion de flores- cerca viveres Cristina - casa</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.368163" lon="-78.499672">
+		<ele />
+		<name>SS-070 - Pedro Criollo - 1965</name>
+		<desc>Barrio La florida lote #18B casa 1er piso Calle -5 junio -- Parada de bus letrero Escuela Margarita Ponce y tienda casa color blanco y rosado</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.359840" lon="-78.511453">
+		<ele />
+		<name>SS-143 - Bryan Stalin Chicaiza Chicaiza - 1996</name>
+		<desc>Libertad de Cataguango Iglesia Crsitiana  alado casa  de 2 pisos #N11-108 -- Frente a casa blanca 2 pisos</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.331815" lon="-78.471462">
+		<ele />
+		<name>SS-049 - Carla Córdova - 2012</name>
+		<desc>Valdivia y El Inca -- Casa de 1 Piso. 4 Medidores. Puerta metálica sobre la calle Valdivia</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.349592" lon="-78.482803">
+		<ele />
+		<name>SS-107 - Abel Elias Ñacato Chano - 1972</name>
+		<desc>Av. Jacinto Jijon y Caamaño y Mariano Morales #22-90 -- Calle Mariano Morales al fondo lado izquierdo  al iniciar la calle hay una capilla y rompe velocidades.</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.331680" lon="-78.484482">
+		<ele />
+		<name>SS-108 - Omar Tipanta - 1979</name>
+		<desc>Calle Ri­o Napo y callejon S/N frente Iglesia Evangelica -- Cerca a La Fabrica Aghemor, Hogar y  Muebles</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.331634" lon="-78.484493">
+		<ele />
+		<name>SS-109 - Martha Veronica Quishpe Pachacama - 0</name>
+		<desc>Calle Rio Napo y callejon S/N frente Iglesia Evangelica -- Cerca a La Fabrica Aghemor, Hogar y  Muebles</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.340783" lon="-78.484772">
+		<ele />
+		<name>SS-110 - Jorge Orlando Loachamin Andrade - 1953</name>
+		<desc>Barrio Santa Isabel, antigua via Amaguaña E5-72 -- Referencia Panaderia Le Croissant y pollos San Pedro. Casa esquinera lado izquierdo. N5-72 perta negra cerramiento gris casa tomate. Lanzar una piedrita al patio para que le vean</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.339345" lon="-78.483110">
+		<ele />
+		<name>SS-111 - Carlos Quishpe - 1988</name>
+		<desc>Antigua via a Amaguaña -- Calle de la cooperativa de ahorro Cotogchoa casa de 3  pisos color taxo,porton negro, vive en el 2 piso</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.378618" lon="-78.476393">
+		<ele />
+		<name>SS-032 - Marco Patiño - 1976</name>
+		<desc>Cuendina Calle Jose Espinoza Callejon sin salida -- En un callejon, donde esta la Carpinteria Ñacato, se baja por el callejon la ultima casa a la derecha. El callejon esta entre una casa de 1 piso y otra de 2 pisos.</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.360285" lon="-78.465543">
+		<ele />
+		<name>SS-042 - Daniel Pachacama - 1999</name>
+		<desc>Barrio San Jose del cortijo frente a la entrada de los cuarteles -- Entrada de tierra, casa al fondo segunda entrada por la Fabrica Aceros Center</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.369301" lon="-78.468610">
+		<ele />
+		<name>SS-047 - Ana Paulina Delgado Guevara - 1990</name>
+		<desc>Calle David Alaluf y De los Arupos. Socios Campos Verdes -- </desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.369301" lon="-78.468610">
+		<ele />
+		<name>SS-048 - Serafin Delgado Guevara - 2000</name>
+		<desc>Calle David Alaluf y De los Arupos. Socios Campos Verdes -- </desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.365557" lon="-78.453186">
+		<ele />
+		<name>SS-055 - Jhoselin Judit Veles - 1999</name>
+		<desc>Calle Kurruba y Miguel Zanipatin -- Casa color verde 1 planta  entre casa blanca y durazno</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.348626" lon="-78.445998">
+		<ele />
+		<name>SS-121 - Marco Alexander Paullin - 2002</name>
+		<desc>Calle Rio Peripa y 7 de Junio -- Barrio Turucuho pasar el puente  Casa de 1 piso en el buzón dice TG. Al frente</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.347497" lon="-78.447658">
+		<ele />
+		<name>SS-122 - Carolina Salas Pillajo - 1999</name>
+		<desc>Calle Ines Gangotena y Via Amaguaña -- Turucucho, pasar 1er puente  Polideportivo, Casa Blanca-Rosada</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.358110" lon="-78.453510">
+		<ele />
+		<name>SS-132 - Ines Salazar Analuisa - 1974</name>
+		<desc>El Milagro, Calle Esmeraldita 2da entrada lado izquierdo al fondo penultima casa de 2 pisos -- casa de 2 pisos</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.347508" lon="-78.444921">
+		<ele />
+		<name>SS-153 - Angel Alaba - 1970</name>
+		<desc>Calle Ines Gangotena y Río Peripa -- Casa 2 pisos amarilla con café puerta verde, lanfor metalica ventana junto a casa gris, pasando Estadio Inchalillo . Ubicación GPS aproximada de donde empieza la calle. Buscar casa y VERIFICAR si el Sordo vive ahí aun.</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.374960" lon="-78.419220">
+		<ele />
+		<name>SS-057 - Daniel Ushiña - 1988</name>
+		<desc>Calle Av. Rio San Jose -- Casa tipo miduvi, puerta azul</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.374970" lon="-78.419199">
+		<ele />
+		<name>SS-058 - Gladys Iza de Ushiña - 1988</name>
+		<desc>Calle Av. Rio San Jose -- Casa tipo miduvi, puerta azul</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.344268" lon="-78.431119">
+		<ele />
+		<name>SS-124 - Fernando Davila - 1964</name>
+		<desc>(Francisco Guarderas #8-02) -- Casa a un lado Picanteria el Hueco entrar por el callejon hasta el fondo en ultima casa</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.346901" lon="-78.431797">
+		<ele />
+		<name>SS-126 - Maria García Tejada - 0</name>
+		<desc>Calle Vinueza lote #30 y Melo -- C.C. Selva Alegre</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.339820" lon="-78.456680">
+		<ele />
+		<name>SS-072 - Maria Julia Paucar - 1960</name>
+		<desc>Calle Joaquin Batle y Calle G (En unos mapas dice Calle H) -- Casa en la esquina frente a terrenos, cerca de madera y alambre  se ve la casa desde afuera</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.339099" lon="-78.454694">
+		<ele />
+		<name>SS-075 - Elvia Cumbajin Simbaya - 1984</name>
+		<desc>pasando el Cementerio, sector San Nicolas. Felix Granja Lote # 9 y Calle  A -- Pasando Redondel Santa Rosa- Puerta de casa color verde oscuro por la segunda puerta del cementerio,frente casa verde de 3 pisos</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.339222" lon="-78.446112">
+		<ele />
+		<name>SS-208 - Rodolfo Minchalo - 1980</name>
+		<desc>CASA (Conjunto El Quijote Casa 22)
+CASA MAMÁ (Calle 25 de Enero casa #4 y 24 enero Pasando los bomberos.  La Victoria) -- Cerca de la iglesia Bautista.</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.333280" lon="-78.443333">
+		<ele />
+		<name>SS-106 - Maria (Lola) Toapanta - 1954</name>
+		<desc>Trabajo(Abdon Calderon y Quimbalembo) Casa(Inchalillo) -- Trabajo(Puesto de ventas de ropa y varios accesorios junto al Greenfrost del Monumento a Ruminahui frente a Tuti)</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.331776" lon="-78.445377">
+		<ele />
+		<name>SS-200 - Marco Patricio Utreras Silva - 1975</name>
+		<desc>Av. Guayaquil y Juan Genaro Jaramillo -- Casa 2do piso Puerta Negra junto a peluquería</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.325972" lon="-78.473588">
+		<ele />
+		<name>SS-051 - José Pinzon - 1962</name>
+		<desc>Barrio San Francisco Calle  Pastaza Y Panzaleo  Junto a la casa #S21-255 casa con tejas viejas -- Cerca de casa que venden Bambú</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.321182" lon="-78.461206">
+		<ele />
+		<name>SS-101 - Fanny Grefa - 1978</name>
+		<desc>Barrio San Pedro, calle Pedro Anti y  Mariana de Jesus, 2do piso  casa 1piso de ladrillo 2do piso color taxo -- Antes de la iglesia, casa de 2 pisos  Rrotulo centro Veterinario, timbrar puerta de reja negra</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.324471" lon="-78.464951">
+		<ele />
+		<name>SS-196 - Alexis Damian Sangucho Pizarro - 2007</name>
+		<desc>Calle Gaspar Lema  Entre Antonio Sinchico y Ventura Ucuango callejon -- Casa de techo verde con el sello de la U a 3 portes de luz (Trabajo)  Ubicación GPS posible del callejon. Mama era costurera. Junto a casa de un Hermano de Español</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.320066" lon="-78.458610">
+		<ele />
+		<name>SS-102 - Juan Carlos Puente - 1993</name>
+		<desc>Barrio San Pedro, calle Antonio Obando y Casimiro Nieto -- casa de 2 pisos color verde y naranja, Porton verde oscuro  penultima casa al fondo</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.318787" lon="-78.462601">
+		<ele />
+		<name>SS-103 - Margarita Lucía - 1981</name>
+		<desc>Calle Los Laureles Casa Blanca puerta verde junto a lanfor -- Cerca al parque de San Pedro</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.315999" lon="-78.460965">
+		<ele />
+		<name>SS-144 - Jhonatan Santiago Paucar Simbaña - 1997</name>
+		<desc>Capelo, calle Los Romeros y Los Arupos -- al fondo ultima casa callejon Casa color Blanco, cerca del arco</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.313380" lon="-78.477189">
+		<ele />
+		<name>SS-016 - Andrea  Yajaiira Montesdeoca Naranjo - 1996</name>
+		<desc>Marqueza de Solanda Conjuntos Los Arupos casa 85 calle 1 y calle C -- Casa amarilla con rejas blancas.</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.314666" lon="-78.473376">
+		<ele />
+		<name>SS-017 - Sonia Gualotuña Oña - 1968</name>
+		<desc>San Jose de Conocoto, Calle Gribaldo Miño Pasando la Iglesia -- </desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.313259" lon="-78.481580">
+		<ele />
+		<name>SS-019 - Juan Rubilova Mena - 1972</name>
+		<desc>Via Conocoto - Conjunto 6 de Junio #1,  Lote 4 casa esquinera color blanco -- Cerca casa comunal</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.313227" lon="-78.481661">
+		<ele />
+		<name>SS-020 - Zhaib Rubilova - 1972</name>
+		<desc>Via Conocoto - Conjunto 6 de Junio #1,  Lote 4 casa esquinera color blanco  Puerta negra metálica -- </desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.313678" lon="-78.477599">
+		<ele />
+		<name>SS-159 - Estela Patricia Novillo - 1963</name>
+		<desc>Conjunto 6 de Junio #2,  manzana 2, Casa # 1 -- casa de 3 pisos color, puertas metálicas color verde,  tiene la casa un jardín</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.303591" lon="-78.492717">
+		<ele />
+		<name>SS-004 - Esmeralda Josefina Bastidas - 1961</name>
+		<desc>San Juan de Concoto, Leonidas Plaza y Manuel de Jesus  Martinez -- Casa celeste, cerca de tienda.</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.316126" lon="-78.494986">
+		<ele />
+		<name>SS-076 - Camila Pachacama Quinga - 1996</name>
+		<desc>Calle Hermano Miguel final cerca del parque principal  #84 OE4-233 -- calle asfaltada puerta de metal negra, muro de bloque, tiene un niño pequeño</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.316124" lon="-78.495042">
+		<ele />
+		<name>SS-077 - Carina Pachacama Quinga - 1990</name>
+		<desc>Calle Hermano Miguel final cerca del parque principal -- calle asfaltada puerta de metal negra, muro de bloque</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.299358" lon="-78.465994">
+		<ele />
+		<name>SS-033 - Carlos Arauz - 1961</name>
+		<desc>Conocoto La Paz, Federico Gonzales Suarez E9-52 y 18 mayo Avenida los Arupos -- Casa tomate y Crema (tienda) 1 piso al lado peluqueria. Cerca de casa   vive en casa de alado Mamá Edelina Sosa</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.295388" lon="-78.474869">
+		<ele />
+		<name>SS-034 - Clara Maldonado - 1968</name>
+		<desc>Conocoto, Calle Pedro Bruning E5-72 y Jose Ascazubi -- a 5 cuadras del Tia Conocoto</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.293448" lon="-78.471710">
+		<ele />
+		<name>SS-035 - Diego Morales - 1988</name>
+		<desc>Calle Simon Bolivar # E7-99, callejon Junto a puerta verde -- Ingresar por el callejon hasta pasillo entre muchas casas y depts. Vive en 3er piso subiendo gradas de caracol</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.293402" lon="-78.471648">
+		<ele />
+		<name>SS-036 - Jaime Morales - 1999</name>
+		<desc>Calle Simon Bolivar # E7-99, callejon Junto a puerta verde -- Ingresar por el callejon hasta pasillo entre muchas casas y depts. Vive en 3er piso subiendo gradas de caracol</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.290796" lon="-78.473264">
+		<ele />
+		<name>SS-041 - Viviana Fernandez Cheza - 2002</name>
+		<desc>Jose Ascazubi  N4- 204 entre 29 de Mayo y Oriente -- </desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.291649" lon="-78.481529">
+		<ele />
+		<name>SS-039 - Morelia Anaí Almagro Quinchiguano - 2001</name>
+		<desc>Calle Jaime Roldos Aguilera #1-63 y Av. Camilo Ponce Enríquez -- Conocoto, Entrada al INNFA</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.285963" lon="-78.486590">
+		<ele />
+		<name>SS-114 - Juan Carlos Gualotuña - 1991</name>
+		<desc>Av Pichincha Pasaje Allende  casa # N3-181 -- Sengunda casa amarilla</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.288696" lon="-78.490343">
+		<ele />
+		<name>SS-116 - Maria Fernanda Batallas - 1978</name>
+		<desc>Santa Monica Baja, Urb. Santa Monica Lote# 390 calle G -- frente a un parque pequeño, casa de 2 pisos puerta negra</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.287556" lon="-78.492081">
+		<ele />
+		<name>SS-118 - Paúl Dominguez - 1997</name>
+		<desc>Santa Mónica 2 Calle Huaynacapac y  Capac Yupanqui Junto a #378 -- </desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.262085" lon="-78.500829">
+		<ele />
+		<name>SS-078 - Camila Alexandra Sislema - 2009</name>
+		<desc>Calle Rafael Albornoz N11-86 y calle 1 Sector Santa Teresita -- Casa de bloque sin pintar</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.274699" lon="-78.498961">
+		<ele />
+		<name>SS-080 - Thalía Catota - 1999</name>
+		<desc>Calle Jose Manuel Plaza y Antonio Fernandez Sector el Rosario Conocoto -- Casa con techo de Zinc esquinera debajo de los cables de alta tension , pasando la liga barrial el Rosario</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.280027" lon="-78.492073">
+		<ele />
+		<name>SS-115 - Luis Armando Paucar - 1987</name>
+		<desc>Santa Monica Alta, Av Pichincha frente al letrero coop. 14 de Marzo -- Visitar en local de internet, junto a  casa N5-02</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.279638" lon="-78.495074">
+		<ele />
+		<name>SS-117 - María Isabel Tigre Quinde - 1984</name>
+		<desc>Barrio la Luz Alta Lote 30 , calle Oe7H -- Calle Oe7H a la vuelta casa tomate con cerca de cinc, pasando Cooperativa 14 de Marzo</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.263190" lon="-78.473824">
+		<ele />
+		<name>SS-061 - David - 2010</name>
+		<desc>Calle Juan de Dios Morales, Frente a CNT . Lote 21? -- Puerta color negro, con 4 medidores afuera. Entre muro de bloque y casa de 3 pisos. Cerca de poste y rompevelocidades.</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.276984" lon="-78.471100">
+		<ele />
+		<name>SS-074 - Luis Eduardo Ortega - 2004</name>
+		<desc>Francisco O Leary N10-264 y Domingo Rengifo -- </desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.278849" lon="-78.474021">
+		<ele />
+		<name>SS-130 - Valeria Vinueza - 1997</name>
+		<desc>Calle Oe2C y Pasaje N9K -- Puente 7 frente al mercado  Casa 3 pisos(vive en el primer piso), porton negro</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.281032" lon="-78.477414">
+		<ele />
+		<name>SS-186 - Johana Loaiza - 1995</name>
+		<desc>Puente 7 Calle Jose Sanchez Malo N9-205 y Pasaje N9E -- Local se arregla Calzado, Cerca Cancha, Casa Cemento 1 piso Bajando de Quito lado derecho.  Familia no aceptaba que la hija era sorda.</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.276769" lon="-78.470019">
+		<ele />
+		<name>SS-226 - Luis - None</name>
+		<desc> -- </desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.268196" lon="-78.465039">
+		<ele />
+		<name>SS-062 - Edison Caiza Paucar - 1994</name>
+		<desc>Pasaje N12I y Cornelia Polit -- Pasaje de entrada de tierra, en la parte de atrás esta el parque  Metropolitano La Armenia . Entrar al pasaje hasta casi al ondo casa de 2 pisos a la derecha.</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.274248" lon="-78.457046">
+		<ele />
+		<name>SS-063 - José María Paucar Yanez - 1964</name>
+		<desc>Pedro Ávila N12-111 y Benjamín Carrión -- Frente a colegio Gonzaga, casa de 2 pisos de ladrillo  casa #N12- (en la tienda)</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.264920" lon="-78.481530">
+		<ele />
+		<name>SS-097 - Javier Guerra Jacome - 1973</name>
+		<desc>Transversal # 6, Conjunto  Prados Vista Hermosa,  casa #16  Familia Tuvon Jacome Oe5-176 -- </desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.263317" lon="-78.466190">
+		<ele />
+		<name>SS-060 - Adrian Paucar Columba - 1994</name>
+		<desc>Puente 8 La Armenia, San Virgilio calle Aurelio Espinoza polit #(N14-227) y Benjamin Wandemberg y Jorge Carrera Andrade -- al fondo ultima casa callejon</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.266589" lon="-78.462971">
+		<ele />
+		<name>SS-065 - Nancy Soledad Paucar - 1969</name>
+		<desc>Barrio San Virgilio calle Aurelio Espinoza Polit  N13-149 y  Sebastian de Benalcazar -- </desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.264760" lon="-78.462193">
+		<ele />
+		<name>SS-066 - Patricio Columba - 1985</name>
+		<desc>Puente 8 La Armenia, San Virgilio calle Aurelio Espinoza N 13-381 -- Cerramiento de cemento, casa de 2 pisos, puerta verde</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.264969" lon="-78.464696">
+		<ele />
+		<name>SS-067 - Silvio Alomoto - 1960</name>
+		<desc>San Virgilio Calle Maximiliano Ontaneda y Manuel J. Calle Oe1-230 -- </desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.255075" lon="-78.449587">
+		<ele />
+		<name>SS-052 - Damaris Daniela Galiche - 2004</name>
+		<desc>Guangopolo, Puente peatonal Sorialoma -- Cerca del Cementerio- casa al fondo bajando gradas</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.254478" lon="-78.446773">
+		<ele />
+		<name>SS-053 - Gloria Cecilia Columba Paucar - 1977</name>
+		<desc>Guangopolo, Sorialoma -- Pasando la cancha de fútbol de Sorialoma</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.251730" lon="-78.500876">
+		<ele />
+		<name>SS-090 - Mauricio Yugsi Catoa - 2000</name>
+		<desc>San Patricio. Sector túneles de la forestal (Puengasi) -- Calle #2 Manzana 11 lote 9 casa color durazno  2 pisos al final de la calle #2</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.249587" lon="-78.497346">
+		<ele />
+		<name>SS-091 - Miguel Armando Coyago - 1988</name>
+		<desc>Calle E14C, casa s/n y Calle E14B -- Abajo de la cerrajeria, arriba de E13-150, frente a E13-135 San Isidro de Puengasí- Cerca de la casa barrial de Puengasi</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.246484" lon="-78.498682">
+		<ele />
+		<name>SS-095 - Melany Tipas - 2008</name>
+		<desc>Calle E11, Casa S6-385 entre Calle S6D y Calle S6G -- San Isidro de Puengasi</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.245442" lon="-78.492968">
+		<ele />
+		<name>SS-137 - Alfonso Aguirre - 1990</name>
+		<desc>Ricardo Izurieta del Castillo y E17D #S6-38 -- Puerta Negra junto a puertas lanfor</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.248310" lon="-78.487632">
+		<ele />
+		<name>SS-093 - Patricia Rivadeneira - 1970</name>
+		<desc>Obrero Independiente calle Z y Ricardo Izurieta del Castillo #S75 frente a la casa S6-S3 -- Preguntar antes de realizar esta visita. Cerca a la cancha de futbol, casa de dos pisos color celeste y con garaje</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.243094" lon="-78.487618">
+		<ele />
+		<name>SS-134 - Ines Rodriguez - 1954</name>
+		<desc>Barrio Eloy Alfaro, calle E20A y pasaje S5B familia Flores Rodriquez M29 Lo Cerca de las canchas -- </desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.247711" lon="-78.485515">
+		<ele />
+		<name>SS-135 - María Galindo - 1959</name>
+		<desc>Barrio Obrero Independiente Calle Ricardo Izurieta del Castillo E20-634 -- Pasando Fabrica Jeans Ebotex - Cerca cancha y quebrada</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.311272" lon="-78.415745">
+		<ele />
+		<name>SS-021 - Guadalupe Catagña - 2010</name>
+		<desc>Barrio San Vicente Calle Manuela Cañizares y Espejo #E1-58 casa 2 pisos -- puerta verde cerca de una tienda esquinera</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.303718" lon="-78.414444">
+		<ele />
+		<name>SS-023 - Marco Patricio (Paco) Atahualpa Salazar - 1963</name>
+		<desc>Juan Montalvo #N3-38 Sector la Y a pocos pasos del parque Alangasí frente al estadio -- Junto a la cevicheria casa color blanco de 2 pisos</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.375989" lon="-78.367828">
+		<ele />
+		<name>SS-084 - Erick Guaman - 1996</name>
+		<desc>Yurak -- </desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.371970" lon="-78.374030">
+		<ele />
+		<name>SS-170 - Clever Sandoval - 2000</name>
+		<desc>Amazonas y Riofrio. S1-108 . Tercer piso -- </desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.366405" lon="-78.375626">
+		<ele />
+		<name>SS-171 - Gabriel Angel Mena - 0</name>
+		<desc>El Condor. Casa de 2 pisos . Frente Cruz -- Casa de Angel es la puerta que da a la calle principal</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.371561" lon="-78.374107">
+		<ele />
+		<name>SS-180 - Miguel Angel - 1975</name>
+		<desc>Amazonas y Riofrio. S1-68 . Fruteria Casa Durazno 2 pisos. -- </desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<wpt lat="-0.366370" lon="-78.375594">
+		<ele />
+		<name>SS-227 - Mariana - 0</name>
+		<desc>El Condor. Casa de 2 pisos . Frente Cruz -- Casa de Angel es la puerta que da a la calle principal</desc>
+		<type>Sordos</type>
+		<extensions>
+			<osmand:osm>special_marker</osmand:osm>
+			<osmand:background>circle</osmand:background>
+			<osmand:color>#ffff0000</osmand:color>
+			<osmand:amenity_subtype>user_defined_other_postcode</osmand:amenity_subtype>
+			<osmand:amenity_type>user_defined_other</osmand:amenity_type>
+		</extensions>
+	</wpt>
+	<trk>
+		<name>1 - Amaguaña</name>
+		<trkseg>
+			<trkpt lat="-0.378623" lon="-78.504615">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.382515" lon="-78.503652">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.395829" lon="-78.517428">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.375555" lon="-78.508287">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.377854" lon="-78.523117">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.378623" lon="-78.504615">
+				<ele>0.0</ele>
+			</trkpt>
+		</trkseg>
+	</trk>
+	<trk>
+		<name>2 - Carapungo</name>
+		<trkseg>
+			<trkpt lat="-0.368238" lon="-78.499640">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.360318" lon="-78.498379">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.368163" lon="-78.499672">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.359840" lon="-78.511453">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.368238" lon="-78.499640">
+				<ele>0.0</ele>
+			</trkpt>
+		</trkseg>
+	</trk>
+	<trk>
+		<name>3 - Chaupitena</name>
+		<trkseg>
+			<trkpt lat="-0.331815" lon="-78.471462">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.349592" lon="-78.482803">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.331680" lon="-78.484482">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.331634" lon="-78.484493">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.340783" lon="-78.484772">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.339345" lon="-78.483110">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.331815" lon="-78.471462">
+				<ele>0.0</ele>
+			</trkpt>
+		</trkseg>
+	</trk>
+	<trk>
+		<name>4 - Cuendina</name>
+		<trkseg>
+			<trkpt lat="-0.378618" lon="-78.476393">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.360285" lon="-78.465543">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.369301" lon="-78.468610">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.369301" lon="-78.468610">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.378618" lon="-78.476393">
+				<ele>0.0</ele>
+			</trkpt>
+		</trkseg>
+	</trk>
+	<trk>
+		<name>5 - Turucocha &amp; Cotogchoa</name>
+		<trkseg>
+			<trkpt lat="-0.365557" lon="-78.453186">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.348626" lon="-78.445998">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.347497" lon="-78.447658">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.358110" lon="-78.453510">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.347508" lon="-78.444921">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.365557" lon="-78.453186">
+				<ele>0.0</ele>
+			</trkpt>
+		</trkseg>
+	</trk>
+	<trk>
+		<name>6 - Selva Alegre &amp; San Fernando</name>
+		<trkseg>
+			<trkpt lat="-0.374960" lon="-78.419220">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.374970" lon="-78.419199">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.344268" lon="-78.431119">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.346901" lon="-78.431797">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.374960" lon="-78.419220">
+				<ele>0.0</ele>
+			</trkpt>
+		</trkseg>
+	</trk>
+	<trk>
+		<name>7 - Santa Rosa</name>
+		<trkseg>
+			<trkpt lat="-0.339820" lon="-78.456680">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.339099" lon="-78.454694">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.339222" lon="-78.446112">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.339820" lon="-78.456680">
+				<ele>0.0</ele>
+			</trkpt>
+		</trkseg>
+	</trk>
+	<trk>
+		<name>8 - Sangolquí</name>
+		<trkseg>
+			<trkpt lat="-0.333280" lon="-78.443333">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.331776" lon="-78.445377">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.333280" lon="-78.443333">
+				<ele>0.0</ele>
+			</trkpt>
+		</trkseg>
+	</trk>
+	<trk>
+		<name>9 - San Pedro A</name>
+		<trkseg>
+			<trkpt lat="-0.325972" lon="-78.473588">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.321182" lon="-78.461206">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.324471" lon="-78.464951">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.325972" lon="-78.473588">
+				<ele>0.0</ele>
+			</trkpt>
+		</trkseg>
+	</trk>
+	<trk>
+		<name>10 - San Pedro B</name>
+		<trkseg>
+			<trkpt lat="-0.320066" lon="-78.458610">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.318787" lon="-78.462601">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.315999" lon="-78.460965">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.320066" lon="-78.458610">
+				<ele>0.0</ele>
+			</trkpt>
+		</trkseg>
+	</trk>
+	<trk>
+		<name>11 - 6 de Junio</name>
+		<trkseg>
+			<trkpt lat="-0.313380" lon="-78.477189">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.314666" lon="-78.473376">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.313259" lon="-78.481580">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.313227" lon="-78.481661">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.313678" lon="-78.477599">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.313380" lon="-78.477189">
+				<ele>0.0</ele>
+			</trkpt>
+		</trkseg>
+	</trk>
+	<trk>
+		<name>12 - La Salle</name>
+		<trkseg>
+			<trkpt lat="-0.303591" lon="-78.492717">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.316126" lon="-78.494986">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.316124" lon="-78.495042">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.303591" lon="-78.492717">
+				<ele>0.0</ele>
+			</trkpt>
+		</trkseg>
+	</trk>
+	<trk>
+		<name>13 - Conocoto A</name>
+		<trkseg>
+			<trkpt lat="-0.299358" lon="-78.465994">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.295388" lon="-78.474869">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.293448" lon="-78.471710">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.293402" lon="-78.471648">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.290796" lon="-78.473264">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.299358" lon="-78.465994">
+				<ele>0.0</ele>
+			</trkpt>
+		</trkseg>
+	</trk>
+	<trk>
+		<name>14 - Conocoto B</name>
+		<trkseg>
+			<trkpt lat="-0.291649" lon="-78.481529">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.285963" lon="-78.486590">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.288696" lon="-78.490343">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.287556" lon="-78.492081">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.291649" lon="-78.481529">
+				<ele>0.0</ele>
+			</trkpt>
+		</trkseg>
+	</trk>
+	<trk>
+		<name>15 - Monserrat</name>
+		<trkseg>
+			<trkpt lat="-0.262085" lon="-78.500829">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.274699" lon="-78.498961">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.280027" lon="-78.492073">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.279638" lon="-78.495074">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.262085" lon="-78.500829">
+				<ele>0.0</ele>
+			</trkpt>
+		</trkseg>
+	</trk>
+	<trk>
+		<name>16 - Puente 7</name>
+		<trkseg>
+			<trkpt lat="-0.263190" lon="-78.473824">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.276984" lon="-78.471100">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.278849" lon="-78.474021">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.281032" lon="-78.477414">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.276769" lon="-78.470019">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.263190" lon="-78.473824">
+				<ele>0.0</ele>
+			</trkpt>
+		</trkseg>
+	</trk>
+	<trk>
+		<name>17 - Armenia A</name>
+		<trkseg>
+			<trkpt lat="-0.268196" lon="-78.465039">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.274248" lon="-78.457046">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.264920" lon="-78.481530">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.268196" lon="-78.465039">
+				<ele>0.0</ele>
+			</trkpt>
+		</trkseg>
+	</trk>
+	<trk>
+		<name>18 - Armenia B</name>
+		<trkseg>
+			<trkpt lat="-0.263317" lon="-78.466190">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.266589" lon="-78.462971">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.264760" lon="-78.462193">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.264969" lon="-78.464696">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.263317" lon="-78.466190">
+				<ele>0.0</ele>
+			</trkpt>
+		</trkseg>
+	</trk>
+	<trk>
+		<name>19 - Guangopolo</name>
+		<trkseg>
+			<trkpt lat="-0.255075" lon="-78.449587">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.254478" lon="-78.446773">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.255075" lon="-78.449587">
+				<ele>0.0</ele>
+			</trkpt>
+		</trkseg>
+	</trk>
+	<trk>
+		<name>20 - Puengasí</name>
+		<trkseg>
+			<trkpt lat="-0.251730" lon="-78.500876">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.249587" lon="-78.497346">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.246484" lon="-78.498682">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.245442" lon="-78.492968">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.251730" lon="-78.500876">
+				<ele>0.0</ele>
+			</trkpt>
+		</trkseg>
+	</trk>
+	<trk>
+		<name>22 - Alangasí</name>
+		<trkseg>
+			<trkpt lat="-0.311272" lon="-78.415745">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.303718" lon="-78.414444">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.311272" lon="-78.415745">
+				<ele>0.0</ele>
+			</trkpt>
+		</trkseg>
+	</trk>
+	<trk>
+		<name>23 - Pintag</name>
+		<trkseg>
+			<trkpt lat="-0.375989" lon="-78.367828">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.371970" lon="-78.374030">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.366405" lon="-78.375626">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.371561" lon="-78.374107">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.366370" lon="-78.375594">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.375989" lon="-78.367828">
+				<ele>0.0</ele>
+			</trkpt>
+		</trkseg>
+	</trk>
+	<trk>
+		<name>21 - PeajeDS</name>
+		<trkseg>
+			<trkpt lat="-0.248310" lon="-78.487632">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.243094" lon="-78.487618">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.247711" lon="-78.485515">
+				<ele>0.0</ele>
+			</trkpt>
+			<trkpt lat="-0.248310" lon="-78.487632">
+				<ele>0.0</ele>
+			</trkpt>
+		</trkseg>
+	</trk>
+	<extensions>
+		<osmand:show_arrows>false</osmand:show_arrows>
+		<osmand:show_start_finish>false</osmand:show_start_finish>
+		<osmand:vertical_exaggeration_scale>1.000000</osmand:vertical_exaggeration_scale>
+		<osmand:line_3d_visualization_by_type>none</osmand:line_3d_visualization_by_type>
+		<osmand:line_3d_visualization_wall_color_type>upward_gradient</osmand:line_3d_visualization_wall_color_type>
+		<osmand:line_3d_visualization_position_type>top</osmand:line_3d_visualization_position_type>
+		<osmand:split_interval>0</osmand:split_interval>
+		<osmand:split_type>no_split</osmand:split_type>
+		<osmand:color>#aa4e4eff</osmand:color>
+		<osmand:width>9</osmand:width>
+		<osmand:points_groups>
+			<osmand:group background="circle" name="Sordos - 21 de abril del 2025" color="#ffff0000" icon="special_marker" />
+		</osmand:points_groups>
+	</extensions>
+</gpx>

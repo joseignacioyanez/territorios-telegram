@@ -14,7 +14,6 @@ def obtener_fecha_titulo():
     return fecha_formateada
 
 def generar_kml_sordos(congregacion_id):
-
     NOMBRE_KML = f"Sordos Sangolqui - {obtener_fecha_titulo()}"
     DESCRIPCION = "Territorios de Señas Sangolquí"
 
@@ -172,7 +171,6 @@ def generar_kml_sordos(congregacion_id):
     mwm_access_Rules = ET.SubElement(extended_data, "mwm:accessRules")
     mwm_access_Rules.text = "Local"
 
-
     sordos = get_sordos_para_exportar_de_congregacion(congregacion_id)
 
     for sordo in sordos:
@@ -193,19 +191,12 @@ def generar_kml_sordos(congregacion_id):
         point = ET.SubElement(placemark, "Point")
         coordinates = ET.SubElement(point, "coordinates")
         coordinates.text = f"{sordo['gps_longitud']},{sordo['gps_latitud']}"
-        
-        #extended_data = ET.SubElement(placemark, "ExtendedData")
-        #data = ET.SubElement(extended_data, "Data")
-        #data.set("name", "Territorio")
-        #value = ET.SubElement(data, "value")
-        #value.text = f"{sordo['territorio_numero']} - {sordo['territorio_nombre']}"
 
-    territorios =  get_territorios_de_congregacion(congregacion_id)
+    territorios = get_territorios_de_congregacion(congregacion_id)
     
     for territorio in territorios:
-
         if territorio['numero'] == 0:
-                continue
+            continue
         
         placemark = ET.SubElement(document, "Placemark")
         name = ET.SubElement(placemark, "name")
@@ -229,11 +220,19 @@ def generar_kml_sordos(congregacion_id):
         coordinates_text += primero
         coordinates.text = coordinates_text
 
+    # En lugar de escribir a un archivo, escribimos a un BytesIO
+    output_buffer = BytesIO()
     tree = ET.ElementTree(root)
     ET.indent(tree, space="\t", level=0)
-    tree.write("territorios.kml", xml_declaration=True,encoding='utf-8', method="xml")
-
-    return "territorios.kml"
+    
+    # Escribir el XML al buffer en memoria
+    tree.write(output_buffer, xml_declaration=True, encoding='utf-8', method="xml")
+    
+    # Volver al inicio del buffer
+    output_buffer.seek(0)
+    
+    # Devolver el buffer en lugar del nombre del archivo
+    return output_buffer
 
 if __name__ == '__main__':
     generar_kml_sordos()

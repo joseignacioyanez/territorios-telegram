@@ -1,4 +1,5 @@
 from datetime import datetime
+from io import BytesIO
 import locale
 import xml.etree.ElementTree as ET
 from services import get_sordos_para_exportar_de_congregacion, get_territorios_de_congregacion
@@ -154,11 +155,20 @@ def generar_gpx_sordos(congregacion_id):
     group.set("color", "#ffff0000")
     group.set("icon", "special_marker")
     
+    
+    # En lugar de escribir a un archivo, escribimos a un BytesIO
+    output_buffer = BytesIO()
     tree = ET.ElementTree(root)
     ET.indent(tree, space="\t", level=0)
-    tree.write("territorios.gpx", xml_declaration=True,encoding='utf-8', method="xml")
-
-    return "territorios.gpx"
+    
+    # Escribir el XML al buffer en memoria
+    tree.write(output_buffer, xml_declaration=True, encoding='utf-8', method="xml")
+    
+    # Volver al inicio del buffer
+    output_buffer.seek(0)
+    
+    # Devolver el buffer en lugar del nombre del archivo
+    return output_buffer
 
 if __name__ == '__main__':
     generar_gpx_sordos()

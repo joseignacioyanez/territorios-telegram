@@ -580,7 +580,6 @@ async def reporte_territorios(update: Update, context: ContextTypes.DEFAULT_TYPE
 
 async def exportar_sordos(update: Update, context: ContextTypes.DEFAULT_TYPE):
     
-    # Determinar ID de Usuario en base al ChatID de Telegram
     try:   
         # Obtener datos del usuario
         user = get_user_by_telegram_chatid(update.message.chat_id)[0]['user']
@@ -592,29 +591,46 @@ async def exportar_sordos(update: Update, context: ContextTypes.DEFAULT_TYPE):
             await update.message.reply_text("No tienes permisos para generar este formulario.")
             return ConversationHandler.END
         else:
-            # Obtener Lista de Territorios
             # Informar al usuario que se está generando el PDF
             progreso_msg = await update.message.reply_text("Generando los archivos. Esto puede tardar unos momentos...")
 
             congregacion_id = user['congregacion_id']
-            csv = generar_csv_sordos(congregacion_id)
-            with open(csv, 'rb') as document_file:                    
-                await context.bot.send_document(chat_id=update.effective_chat.id, document=document_file, caption=f"*CSV* - Google My Maps", parse_mode='markdown')
-                
-            kml = generar_kml_sordos(congregacion_id)
-            with open(kml, 'rb') as document_file:
-                await context.bot.send_document(chat_id=update.effective_chat.id, document=document_file, caption=f"*KML* - Maps.Me", parse_mode='markdown')
-
-            gpx = generar_gpx_sordos(congregacion_id)
-            with open(gpx, 'rb') as document_file:
-                await context.bot.send_document(chat_id=update.effective_chat.id, document=document_file, caption=f"*GPX* - Osmand", parse_mode='markdown')
+            congregacion_nombre = user['congregacion_nombre']
+            file_name = f"{congregacion_nombre}-{datetime.datetime.now().strftime('%d-%m-%y')}"
+            
+            # Generar archivos en memoria
+            csv_buffer = generar_csv_sordos(congregacion_id)
+            kml_buffer = generar_kml_sordos(congregacion_id)
+            gpx_buffer = generar_gpx_sordos(congregacion_id)
+            
+            # Enviando CSV
+            await context.bot.send_document(
+                chat_id=update.effective_chat.id,
+                document=csv_buffer.getbuffer().tobytes(),
+                filename=f"{file_name}.csv",
+                caption="*CSV* - Google My Maps",
+                parse_mode='markdown'
+            )
+            
+            # Enviando KML
+            await context.bot.send_document(
+                chat_id=update.effective_chat.id,
+                document=kml_buffer.getbuffer().tobytes(),
+                filename=f"{file_name}.kml",
+                caption="*KML* - Maps.Me",
+                parse_mode='markdown'
+            )
+            
+            # Enviando GPX
+            await context.bot.send_document(
+                chat_id=update.effective_chat.id,
+                document=gpx_buffer.getbuffer().tobytes(),
+                filename=f"{file_name}.gpx",
+                caption="*GPX* - Osmand",
+                parse_mode='markdown'
+            )
 
             await progreso_msg.delete()
-
-            # Cleanup
-            os.remove(csv)
-            os.remove(kml)
-            os.remove(gpx)
 
     except Exception as e:
         print(e)
