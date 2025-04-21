@@ -13,6 +13,7 @@ class Asignacion:
     def __init__(self, id, publicador_nombre, territorio_numero, territorio_nombre, fecha_asignacion, fecha_fin):
         self.id = id
         self.publicador_nombre = publicador_nombre
+        # Usar los campos de texto en lugar de los campos de relación
         self.territorio_numero = territorio_numero
         self.territorio_nombre = territorio_nombre
         self.fecha_asignacion = fecha_asignacion
@@ -58,9 +59,8 @@ def generar_s_13_pdf_bytes(congregacion_id, template_path="scripts/S-13_S.pdf"):
     from datetime import datetime
     from collections import defaultdict
 
-    # Obtener Territorios de Django
+    # Obtener Territorios de Django (para los que no tienen asignaciones)
     territorios = get_territorios_de_congregacion(congregacion_id)
-    
     territorios = {territorio['numero']: territorio['nombre'] for territorio in territorios if territorio['activo']}
 
     # Obtener asignaciones de Django
@@ -89,29 +89,52 @@ def generar_s_13_pdf_bytes(congregacion_id, template_path="scripts/S-13_S.pdf"):
 
     anios_teocraticos = sorted(anios_teocraticos)
 
+    # Primero, crear un diccionario que registre los nombres de territorios por año
+    nombres_historicos = defaultdict(dict)  # {año: {numero: nombre}}
+    
+    # Registrar nombres históricos de las asignaciones
+    for asignacion in asignaciones:
+        anio = asignacion.anio_teocratico
+        numero = asignacion.territorio_numero
+        nombre = asignacion.territorio_nombre
+        if numero not in nombres_historicos[anio]:
+            nombres_historicos[anio][numero] = nombre
+
     # 💡 Crear estructura base con territorios para cada año
     for anio in anios_teocraticos:
-        for numero, nombre in territorios.items():
-            anio_teocratico_data[anio][numero] = TerritoryData(
-                number=numero,
-                name=nombre,
-                asignaciones=[]
-            )
+        # Primero, añadir territorios que tienen asignaciones en este año
+        for asignacion in [a for a in asignaciones if a.anio_teocratico == anio]:
+            numero = asignacion.territorio_numero
+            nombre = asignacion.territorio_nombre
+            if numero not in anio_teocratico_data[anio]:
+                anio_teocratico_data[anio][numero] = TerritoryData(
+                    number=numero,
+                    name=nombre,
+                    asignaciones=[]
+                )
+        
+        # Luego, añadir todos los territorios activos que no tienen asignaciones
+        for numero, nombre_actual in territorios.items():
+            if numero not in anio_teocratico_data[anio]:
+                # Buscar si hay nombre histórico para este año
+                nombre = nombres_historicos[anio].get(numero, nombre_actual)
+                # Si no hay nombre histórico para este año, buscar en años anteriores
+                if nombre == nombre_actual:
+                    for año_anterior in sorted([a for a in anios_teocraticos if a < anio], reverse=True):
+                        if numero in nombres_historicos[año_anterior]:
+                            nombre = nombres_historicos[año_anterior][numero]
+                            break
+                
+                anio_teocratico_data[anio][numero] = TerritoryData(
+                    number=numero,
+                    name=nombre,
+                    asignaciones=[]
+                )
 
     # Insertar asignaciones reales
     for asignacion in asignaciones:
         anio = asignacion.anio_teocratico
         numero = asignacion.territorio_numero
-
-        if anio not in anio_teocratico_data:
-            anio_teocratico_data[anio] = {}
-        if numero not in anio_teocratico_data[anio]:
-            anio_teocratico_data[anio][numero] = TerritoryData(
-                number=numero,
-                name=asignacion.territorio_nombre,
-                asignaciones=[]
-            )
-
         anio_teocratico_data[anio][numero].asignaciones.append(asignacion)
 
     # Añadir mensaje de "-" a los que no tengan asignaciones

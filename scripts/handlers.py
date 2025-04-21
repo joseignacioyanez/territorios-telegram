@@ -1,6 +1,7 @@
 # Standard Library Imports
 import base64
 from io import BytesIO
+import json
 import os
 import time
 import datetime
@@ -62,20 +63,20 @@ async def asignar(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
     
     # Determinar ID de Usuario en base al ChatID de Telegram
     try:
-        user = get_user_by_telegram_chatid(update.message.chat_id)[0]
+        user = get_user_by_telegram_chatid(update.message.chat_id)[0]['user']
         context.user_data['user_asignador'] = user
     except Exception as e:
         await update.message.reply_text("No se reconoce este usuario. Por favor contacta a un administrador.")
         return ConversationHandler.END
         
     # Verificar Permisos en base a Grupos de Usuarios
-    user_groups = context.user_data['user_asignador']['user']['groups']
+    user_groups = context.user_data['user_asignador']['groups']
     groups_pueden_asignar = ['administradores', 'asignadores']
     if any(group.get('name') in groups_pueden_asignar for group in user_groups):
         
         # Obtener Lista de Publicadores Activos de la misma Congregación
         try:
-            id_congregacion = context.user_data['user_asignador']['congregacion']
+            id_congregacion = context.user_data['user_asignador']['congregacion_id']
             publicadores = get_publicadores_activos_de_congregacion(id_congregacion)
         except Exception as e:
             await update.message.reply_text("Error al obtener la lista de Publicadores. Por favor contacta a un administrador.")
@@ -119,7 +120,7 @@ async def publicador(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
 
     # Verificar si el usuario tiene Asignaciones Pendientes de entregar
     try:
-        congregacion_id = context.user_data['user_asignador']['congregacion']
+        congregacion_id = context.user_data['user_asignador']['congregacion_id']
         asignaciones_pendientes =  get_asignaciones_pendiente_de_congregacion(congregacion_id)
     except Exception as e:
         await update.message.reply_text("Error al obtener la lista de Asignaciones Pendientes. Por favor contacta a un administrador.")
@@ -162,7 +163,7 @@ async def verificacion(update: Update, context: ContextTypes.DEFAULT_TYPE) -> in
 
         # Obtener Lista de Territorios Disponibles
         try:
-            congregacion_id = context.user_data['user_asignador']['congregacion']
+            congregacion_id = context.user_data['user_asignador']['congregacion_id']
             territorios_disponibles = get_territorios_disponibles_de_congregacion(congregacion_id)
             context.user_data['territorios_disponibles'] = territorios_disponibles
 
@@ -405,16 +406,16 @@ async def reporte_asignaciones(update: Update, context: ContextTypes.DEFAULT_TYP
 
     # Determinar ID de Usuario en base al ChatID de Telegram
     try:
-        user = get_user_by_telegram_chatid(update.message.chat_id)[0]
+        user = get_user_by_telegram_chatid(update.message.chat_id)[0]['user']
         context.user_data['user_data'] = user
     
         # Verificar Permisos en base a Grupos de Usuarios
-        user_groups = context.user_data['user_data']['user']['groups']
+        user_groups = context.user_data['user_data']['groups']
         groups_pueden_administrar = ['administradores']
         if any(group.get('name') in groups_pueden_administrar for group in user_groups):
 
             # Obtener Lista de Asignaciones Pendientes
-            congregacion_id = user['congregacion']
+            congregacion_id = user['congregacion_id']
             asignaciones_pendientes = get_asignaciones_pendiente_de_congregacion(congregacion_id)
 
 
@@ -470,16 +471,16 @@ async def reporte_entregas(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     # Determinar ID de Usuario en base al ChatID de Telegram
     try:
-        user = get_user_by_telegram_chatid(update.message.chat_id)[0]
+        user = get_user_by_telegram_chatid(update.message.chat_id)[0]['user']
         context.user_data['user_data'] = user
     
         # Verificar Permisos en base a Grupos de Usuarios
-        user_groups = context.user_data['user_data']['user']['groups']
+        user_groups = context.user_data['user_data']['groups']
         groups_pueden_administrar = ['administradores']
         if any(group.get('name') in groups_pueden_administrar for group in user_groups):
 
             # Obtener Lista de Entregas Recientes
-            congregacion_id = user['congregacion']
+            congregacion_id = user['congregacion_id']
             asignaciones_entregadas =  get_asignaciones_entregadas_de_congregacion(congregacion_id)
 
             # Generar Keyboard con boton por cada asignacion
@@ -528,16 +529,16 @@ async def reporte_territorios(update: Update, context: ContextTypes.DEFAULT_TYPE
 
     # Determinar ID de Usuario en base al ChatID de Telegram
     try:
-        user = get_user_by_telegram_chatid(update.message.chat_id)[0]
+        user = get_user_by_telegram_chatid(update.message.chat_id)[0]['user']
         context.user_data['user_data'] = user
     
         # Verificar Permisos en base a Grupos de Usuarios
-        user_groups = context.user_data['user_data']['user']['groups']
+        user_groups = context.user_data['user_data']['groups']
         groups_pueden_administrar = ['administradores']
         if any(group.get('name') in groups_pueden_administrar for group in user_groups):
 
             # Obtener Lista de Territorios
-            congregacion_id = user['congregacion']
+            congregacion_id = user['congregacion_id']
             territorios =  get_territorios_de_congregacion(congregacion_id)
 
             # Generar Keyboard con boton por cada asignacion
@@ -580,18 +581,22 @@ async def reporte_territorios(update: Update, context: ContextTypes.DEFAULT_TYPE
 async def exportar_sordos(update: Update, context: ContextTypes.DEFAULT_TYPE):
     
     # Determinar ID de Usuario en base al ChatID de Telegram
-    try:
-        user = get_user_by_telegram_chatid(update.message.chat_id)[0]
+    try:   
+        # Obtener datos del usuario
+        user = get_user_by_telegram_chatid(update.message.chat_id)[0]['user']
         context.user_data['user_data'] = user
-    
-        # Verificar Permisos en base a Grupos de Usuarios
-        user_groups = context.user_data['user_data']['user']['groups']
-        groups_pueden_administrar = ['administradores']
-        if any(group.get('name') in groups_pueden_administrar for group in user_groups):
-
+        # Verificar permisos
+        user_groups = user['groups']
+        groups_pueden_administrar = ['administradores']        
+        if not any(group.get('name') in groups_pueden_administrar for group in user_groups):
+            await update.message.reply_text("No tienes permisos para generar este formulario.")
+            return ConversationHandler.END
+        else:
             # Obtener Lista de Territorios
-            congregacion_id = user['congregacion']
+            # Informar al usuario que se está generando el PDF
+            progreso_msg = await update.message.reply_text("Generando los archivos. Esto puede tardar unos momentos...")
 
+            congregacion_id = user['congregacion_id']
             csv = generar_csv_sordos(congregacion_id)
             with open(csv, 'rb') as document_file:                    
                 await context.bot.send_document(chat_id=update.effective_chat.id, document=document_file, caption=f"*CSV* - Google My Maps", parse_mode='markdown')
@@ -604,12 +609,16 @@ async def exportar_sordos(update: Update, context: ContextTypes.DEFAULT_TYPE):
             with open(gpx, 'rb') as document_file:
                 await context.bot.send_document(chat_id=update.effective_chat.id, document=document_file, caption=f"*GPX* - Osmand", parse_mode='markdown')
 
+            await progreso_msg.delete()
+
             # Cleanup
             os.remove(csv)
             os.remove(kml)
             os.remove(gpx)
 
     except Exception as e:
+        print(e)
+        notify_exception(e)
         await update.message.reply_text("No se reconoce este usuario. Por favor contacta a un administrador.")
         return ConversationHandler.END
 
