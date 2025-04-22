@@ -54,9 +54,12 @@ def generar_gpx_sordos(congregacion_id):
         osmand_background = ET.SubElement(extensions, "osmand:background")
         osmand_background.text = "circle"
         osmand_color = ET.SubElement(extensions, "osmand:color")
-        if sordo['territorio_nombre'] == "Estudios":
-            osmand_color.text = "#ff86b953"
-        else:
+        try:
+            if sordo['territorio_nombre'] == "Estudios":
+                osmand_color.text = "#ff86b953"
+            else:
+                osmand_color.text = "#ffff0000"
+        except KeyError:
             osmand_color.text = "#ffff0000"
         osmand_ammenity_subtype = ET.SubElement(extensions, "osmand:amenity_subtype")
         osmand_ammenity_subtype.text = "user_defined_other_postcode"

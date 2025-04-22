@@ -12,12 +12,14 @@ def generar_csv_sordos(congregacion_id):
     writer.writerow(field)
 
     sordos = get_sordos_para_exportar_de_congregacion(congregacion_id)
-
     for sordo in sordos:
         WKT = f"\"POINT ({sordo['gps_longitud']} {sordo['gps_latitud']})\""
-        if sordo['territorio_nombre'] == "Estudios":
-            estudio = "Estudio"
-        else:
+        try:
+            if sordo['territorio_nombre'] == "Estudios":
+                estudio = "Estudio"
+            else:
+                estudio = "No Estudio"
+        except KeyError:
             estudio = "No Estudio"
 
         nombre = f"{sordo['codigo']} - {sordo['nombre']} - {sordo['anio_nacimiento']}".replace(',', ';')
