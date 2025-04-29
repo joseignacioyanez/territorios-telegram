@@ -41,7 +41,7 @@ def generar_csv_sordos(congregacion_id):
         primero = ""
 
         for sordo in sordos:
-            if sordo['territorio_numero'] == territorio['numero']:
+            if sordo.get('territorio_numero') == territorio['numero']:
                 poligono += f"{sordo['gps_longitud']} {sordo['gps_latitud']},"
                 if not ya_primero:
                     primero = f"{sordo['gps_longitud']} {sordo['gps_latitud']}"

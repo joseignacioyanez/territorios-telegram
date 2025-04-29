@@ -85,7 +85,7 @@ def generar_gpx_sordos(congregacion_id):
         primero = {}
 
         for sordo in sordos:
-            if sordo['territorio_numero'] == territorio['numero']:
+            if sordo.get('territorio_numero') == territorio['numero']:
                 trkpt = ET.SubElement(trkseg, "trkpt")
                 trkpt.set("lat", str(sordo['gps_latitud']))
                 trkpt.set("lon", str(sordo['gps_longitud']))

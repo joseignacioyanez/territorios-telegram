@@ -211,7 +211,7 @@ def generar_kml_sordos(congregacion_id):
         primero = ""
 
         for sordo in sordos:
-            if sordo['territorio_numero'] == territorio['numero']:
+            if sordo.get('territorio_numero') == territorio['numero']:
                 coordinates_text += f"{sordo['gps_longitud']},{sordo['gps_latitud']},0\n"
                 if not ya_primero:
                     primero = f"{sordo['gps_longitud']},{sordo['gps_latitud']},0\n"
