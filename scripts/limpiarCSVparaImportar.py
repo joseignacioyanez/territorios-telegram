@@ -20,7 +20,7 @@ def convertir_grado_decimal(coord):
     return a_decimal(lat), a_decimal(lon)
 
 # Cargar el CSV
-df = pd.read_csv("Datos Limpios Pelileo PreSeparacionGPS.csv", sep=";", dtype=str)
+df = pd.read_csv("./scripts/DatosExtrasPelileo.csv", sep=";", dtype=str)
 
 # Paso 1: Separar coordenadas en latitud y longitud en formato decimal
 latitudes = []

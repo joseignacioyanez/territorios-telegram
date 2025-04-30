@@ -84,6 +84,7 @@ async def asignar(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
 
         # Generar Keyboard con boton por cada publicador y enviar
         reply_keyboard = []
+        publicadores.sort(key=lambda x: x['nombre'])
         for publicador in publicadores:
             reply_keyboard.append([str(publicador['id']) + ' - ' + publicador['nombre']])
 
