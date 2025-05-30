@@ -1,8 +1,8 @@
 import locale
 import datetime
-import requests
 import traceback
 from config import TELEGRAM_BOT_TOKEN, TELEGRAM_TECH_ADMIN_CHAT_ID
+from security import safe_requests
 
 def formatear_fecha(fecha):
     meses_es = {
@@ -30,5 +30,5 @@ def notify_exception(e: Exception) -> None:
     # Notify the admin about the exception
     error_message = f"☢️ An exception occurred in the bot:\n\n{str(e)}\n\n{traceback.format_exc()}"
     url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage?chat_id={TELEGRAM_TECH_ADMIN_CHAT_ID}&text={error_message}"
-    requests.get(url)
+    safe_requests.get(url)
     
