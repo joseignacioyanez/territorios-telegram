@@ -76,7 +76,7 @@ def main() -> None:
         print(f"An exception occurred in the bot:\n\n{str(e)}\n\n{traceback.format_exc()}")
         error_message = f"An exception occurred in the bot:\n\n{str(e)}\n\n{traceback.format_exc()}"
         url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage?chat_id={TELEGRAM_TECH_ADMIN_CHAT_ID}&text={error_message}"
-        requests.get(url)
+        requests.get(url, timeout=60)
 
 if __name__ == "__main__":
     main()
