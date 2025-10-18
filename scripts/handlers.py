@@ -1006,67 +1006,67 @@ async def echo(update: Update, context: ContextTypes.DEFAULT_TYPE):
     
     # Eliminar cometarios para produccion
     # Ignorar mensajes del Administrador    
-    #if str(update.effective_chat.id) == str(SUPERADMIN_CHAT_ID):
-    #    pass
-    #else:
-        
-    # Verificar Tipos de Mensajes
-    if update.message.location:
-        await context.bot.send_message(chat_id=SUPERADMIN_CHAT_ID, text=f"💬 {nombre_usuario} - {update.effective_chat.id} - 📍 Ubicación")
-        await context.bot.send_location(chat_id=SUPERADMIN_CHAT_ID, latitude=update.message.location.latitude, longitude=update.message.location.longitude)
-    elif update.message.photo:
-        file_id = update.message.photo[0].file_id
-        caption = update.message.caption
-        await context.bot.send_message(chat_id=SUPERADMIN_CHAT_ID, text=f"💬 {nombre_usuario} - {update.effective_chat.id} - 📸 Foto")
-        await context.bot.send_photo(chat_id=SUPERADMIN_CHAT_ID, photo=file_id, caption=caption)
-    elif update.message.voice:
-        file_id = update.message.voice.file_id
-        await context.bot.send_message(chat_id=SUPERADMIN_CHAT_ID, text=f"💬 {nombre_usuario} - {update.effective_chat.id} - 🎤 Audio")
-        await context.bot.send_voice(chat_id=SUPERADMIN_CHAT_ID, voice=file_id)
-    elif update.message.audio:
-        file_id = update.message.audio.file_id
-        caption = update.message.caption
-        await context.bot.send_message(chat_id=SUPERADMIN_CHAT_ID, text=f"💬 {nombre_usuario} - {update.effective_chat.id} - 🎵 Audio")
-        await context.bot.send_audio(chat_id=SUPERADMIN_CHAT_ID, audio=file_id, caption=caption)
-    elif update.message.document:
-        file_id = update.message.document.file_id
-        caption = update.message.caption
-        await context.bot.send_message(chat_id=SUPERADMIN_CHAT_ID, text=f"💬 {nombre_usuario} - {update.effective_chat.id} - 📄 Documento")
-        await context.bot.send_document(chat_id=SUPERADMIN_CHAT_ID, document=file_id, caption=caption)
-    elif update.message.video:
-        file_id = update.message.video.file_id
-        caption = update.message.caption
-        await context.bot.send_message(chat_id=SUPERADMIN_CHAT_ID, text=f"💬 {nombre_usuario} - {update.effective_chat.id} - 🎥 Video")
-        await context.bot.send_video(chat_id=SUPERADMIN_CHAT_ID, video=file_id, caption=caption)
-    elif update.message.video_note:
-        file_id = update.message.video_note.file_id
-        await context.bot.send_message(chat_id=SUPERADMIN_CHAT_ID, text=f"💬 {nombre_usuario} - {update.effective_chat.id} - 🎥 Video Note")
-        await context.bot.send_video_note(chat_id=SUPERADMIN_CHAT_ID, video_note=file_id)
-    elif update.message.sticker:
-        file_id = update.message.sticker.file_id
-        await context.bot.send_message(chat_id=SUPERADMIN_CHAT_ID, text=f"💬 {nombre_usuario} - {update.effective_chat.id} - 🎨 Sticker")
-        await context.bot.send_sticker(chat_id=SUPERADMIN_CHAT_ID, sticker=file_id)
-    elif update.message.contact:
-        await context.bot.send_message(chat_id=SUPERADMIN_CHAT_ID, text=f"💬 {nombre_usuario} - {update.effective_chat.id} - 👤 Contacto")
-        await context.bot.send_contact(chat_id=SUPERADMIN_CHAT_ID, phone_number=update.message.contact.phone_number, first_name=update.message.contact.first_name)
-    elif update.message.text:
-        await context.bot.send_message(chat_id=SUPERADMIN_CHAT_ID, text=f"💬 {nombre_usuario} - {update.effective_chat.id} - 📝 Texto")
-        await context.bot.send_message(chat_id=SUPERADMIN_CHAT_ID, text=update.message.text)
+    if str(update.effective_chat.id) == str(SUPERADMIN_CHAT_ID):
+        pass
     else:
-        await context.bot.send_message(chat_id=SUPERADMIN_CHAT_ID, text=f"💬 {nombre_usuario} - {update.effective_chat.id} - 🤷‍♂️ No se pudo identificar el tipo de mensaje")
-        await context.bot.send_message(chat_id=SUPERADMIN_CHAT_ID, text=update)
+            
+        # Verificar Tipos de Mensajes
+        if update.message.location:
+            await context.bot.send_message(chat_id=SUPERADMIN_CHAT_ID, text=f"💬 {nombre_usuario} - {update.effective_chat.id} - 📍 Ubicación")
+            await context.bot.send_location(chat_id=SUPERADMIN_CHAT_ID, latitude=update.message.location.latitude, longitude=update.message.location.longitude)
+        elif update.message.photo:
+            file_id = update.message.photo[0].file_id
+            caption = update.message.caption
+            await context.bot.send_message(chat_id=SUPERADMIN_CHAT_ID, text=f"💬 {nombre_usuario} - {update.effective_chat.id} - 📸 Foto")
+            await context.bot.send_photo(chat_id=SUPERADMIN_CHAT_ID, photo=file_id, caption=caption)
+        elif update.message.voice:
+            file_id = update.message.voice.file_id
+            await context.bot.send_message(chat_id=SUPERADMIN_CHAT_ID, text=f"💬 {nombre_usuario} - {update.effective_chat.id} - 🎤 Audio")
+            await context.bot.send_voice(chat_id=SUPERADMIN_CHAT_ID, voice=file_id)
+        elif update.message.audio:
+            file_id = update.message.audio.file_id
+            caption = update.message.caption
+            await context.bot.send_message(chat_id=SUPERADMIN_CHAT_ID, text=f"💬 {nombre_usuario} - {update.effective_chat.id} - 🎵 Audio")
+            await context.bot.send_audio(chat_id=SUPERADMIN_CHAT_ID, audio=file_id, caption=caption)
+        elif update.message.document:
+            file_id = update.message.document.file_id
+            caption = update.message.caption
+            await context.bot.send_message(chat_id=SUPERADMIN_CHAT_ID, text=f"💬 {nombre_usuario} - {update.effective_chat.id} - 📄 Documento")
+            await context.bot.send_document(chat_id=SUPERADMIN_CHAT_ID, document=file_id, caption=caption)
+        elif update.message.video:
+            file_id = update.message.video.file_id
+            caption = update.message.caption
+            await context.bot.send_message(chat_id=SUPERADMIN_CHAT_ID, text=f"💬 {nombre_usuario} - {update.effective_chat.id} - 🎥 Video")
+            await context.bot.send_video(chat_id=SUPERADMIN_CHAT_ID, video=file_id, caption=caption)
+        elif update.message.video_note:
+            file_id = update.message.video_note.file_id
+            await context.bot.send_message(chat_id=SUPERADMIN_CHAT_ID, text=f"💬 {nombre_usuario} - {update.effective_chat.id} - 🎥 Video Note")
+            await context.bot.send_video_note(chat_id=SUPERADMIN_CHAT_ID, video_note=file_id)
+        elif update.message.sticker:
+            file_id = update.message.sticker.file_id
+            await context.bot.send_message(chat_id=SUPERADMIN_CHAT_ID, text=f"💬 {nombre_usuario} - {update.effective_chat.id} - 🎨 Sticker")
+            await context.bot.send_sticker(chat_id=SUPERADMIN_CHAT_ID, sticker=file_id)
+        elif update.message.contact:
+            await context.bot.send_message(chat_id=SUPERADMIN_CHAT_ID, text=f"💬 {nombre_usuario} - {update.effective_chat.id} - 👤 Contacto")
+            await context.bot.send_contact(chat_id=SUPERADMIN_CHAT_ID, phone_number=update.message.contact.phone_number, first_name=update.message.contact.first_name)
+        elif update.message.text:
+            await context.bot.send_message(chat_id=SUPERADMIN_CHAT_ID, text=f"💬 {nombre_usuario} - {update.effective_chat.id} - 📝 Texto")
+            await context.bot.send_message(chat_id=SUPERADMIN_CHAT_ID, text=update.message.text)
+        else:
+            await context.bot.send_message(chat_id=SUPERADMIN_CHAT_ID, text=f"💬 {nombre_usuario} - {update.effective_chat.id} - 🤷‍♂️ No se pudo identificar el tipo de mensaje")
+            await context.bot.send_message(chat_id=SUPERADMIN_CHAT_ID, text=update)
 
-    # Send inline button to SUPERADMIN to answer user
-    timestamp_now = str(int(time.time()))
-    await context.bot.send_message(
-        chat_id=SUPERADMIN_CHAT_ID,
-        text=f"📬 Puedes Responder a {nombre_usuario} haciendo click en el botón de abajo",
-        reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton("Responder: '¡Hola! Mensaje recibido. 🫡 Gracias por tu ayuda'", callback_data=f"{timestamp_now};responder_usuario;{update.effective_chat.id}")]
-        ])
-    )
+        # Send inline button to SUPERADMIN to answer user
+        timestamp_now = str(int(time.time()))
+        await context.bot.send_message(
+            chat_id=SUPERADMIN_CHAT_ID,
+            text=f"📬 Puedes Responder a {nombre_usuario} haciendo click en el botón de abajo",
+            reply_markup=InlineKeyboardMarkup([
+                [InlineKeyboardButton("Responder: '¡Hola! Mensaje recibido. 🫡 Gracias por tu ayuda'", callback_data=f"{timestamp_now};responder_usuario;{update.effective_chat.id}")]
+            ])
+        )
 
-    await update.message.reply_text(
-        "📬 Tu mensaje ha sido enviado a un Administrador. Gracias por tu paciencia. 🙏",
-        reply_markup=ReplyKeyboardRemove()
-    )
+        await update.message.reply_text(
+            "📬 Tu mensaje ha sido enviado a un Administrador. Gracias por tu paciencia. 🙏",
+            reply_markup=ReplyKeyboardRemove()
+        )

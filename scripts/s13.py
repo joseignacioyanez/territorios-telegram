@@ -183,6 +183,10 @@ def generate_multi_page_pdf_bytes(anio_teocratico_data, template_path):
         # Process each territory
         for numero, territorio_data in territorio_items:
             asignaciones = territorio_data.asignaciones
+
+            if numero == 0:
+                # Skip territory number 0 (usually reserved for special cases)
+                continue
             
             # Calculate number of lines needed for this territory
             if len(asignaciones) > 4:
