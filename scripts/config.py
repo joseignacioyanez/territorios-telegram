@@ -11,12 +11,13 @@ TELEGRAM_TECH_ADMIN_CHAT_ID = os.environ['TELEGRAM_TECH_ADMIN_CHAT_ID']
 
 TELEGRAM_BOT_TOKEN=os.environ['TELEGRAM_BOT_TOKEN']
 env=os.environ['TELEGRAM_BOT_TOKEN']
+base_url=os.environ['BASE_URL']
 # Producción
 #BASE_URL_API = 'http://territorios-django:8000/api/'
 #BASE_URL_WEB = 'http://territorios-django:8000/'
 #Desarrollo
-BASE_URL_API = 'http://localhost:8000/api/'
-BASE_URL_WEB = 'http://localhost:8000/'
+BASE_URL_API = f'http://{base_url}/api/'
+BASE_URL_WEB = f'http://{base_url}/'
 
 # Enable logging
 logging.basicConfig(
